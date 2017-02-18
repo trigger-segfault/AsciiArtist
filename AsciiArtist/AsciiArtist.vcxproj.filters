@@ -1,0 +1,504 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="Source Files">
+      <UniqueIdentifier>{4FC737F1-C7A5-4376-A066-2A32D752A2FF}</UniqueIdentifier>
+      <Extensions>cpp;c;cc;cxx;def;odl;idl;hpj;bat;asm;asmx</Extensions>
+    </Filter>
+    <Filter Include="Header Files">
+      <UniqueIdentifier>{93995380-89BD-4b04-88EB-625FBE52EBFB}</UniqueIdentifier>
+      <Extensions>h;hpp;hxx;hm;inl;inc;xsd</Extensions>
+    </Filter>
+    <Filter Include="Resource Files">
+      <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
+      <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
+    </Filter>
+    <Filter Include="Unused">
+      <UniqueIdentifier>{be805536-adf1-4402-bfa6-b51e7f8f1458}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\Drawing">
+      <UniqueIdentifier>{f911da5a-ddf6-477f-afd0-ce7945564e1b}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\Misc">
+      <UniqueIdentifier>{d7895a99-c3be-4be4-ad34-c85d321fd2c1}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\Input">
+      <UniqueIdentifier>{4bbb58b9-ef7d-4e90-b269-1b3f7766f00d}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\Drawing">
+      <UniqueIdentifier>{4249b3c8-2aad-469a-a177-c95ef309f592}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\Input">
+      <UniqueIdentifier>{fcdd668a-dbea-4be1-9fc4-a3347ed2c25d}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\Misc">
+      <UniqueIdentifier>{4c78370c-c091-4752-874e-21a83cc5786c}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\Components">
+      <UniqueIdentifier>{9715cac8-a77a-4718-b30c-3c5af76238fd}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\Components">
+      <UniqueIdentifier>{fa2a4ea5-af42-4cca-b803-6486accc310f}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\Frames">
+      <UniqueIdentifier>{da1a6e62-4fb8-401d-99c9-385d40076d5b}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\Frames">
+      <UniqueIdentifier>{6af4f3ef-f4bc-4365-b9bc-f8edc786c91e}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\Tools">
+      <UniqueIdentifier>{1714f228-e1a1-4d48-a9ad-e3df2649fcd7}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\Tools">
+      <UniqueIdentifier>{aa41b8dd-e3aa-4bf4-a246-e3bfacdf2b67}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\AsciiArtist">
+      <UniqueIdentifier>{ba693772-605f-4eea-b000-e29e4dc2916f}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\AsciiArtist">
+      <UniqueIdentifier>{e9f674a0-ec91-4c90-9027-5afb0761e7c9}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <Text Include="ReadMe.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="Geometry.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="IOStream.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="FileManager.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="BorderDrawing.h">
+      <Filter>Unused</Filter>
+    </ClInclude>
+    <ClInclude Include="ConsoleApp.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="HiddenWinAPI.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Component.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Mouse.h">
+      <Filter>Header Files\Input</Filter>
+    </ClInclude>
+    <ClInclude Include="MouseButtons.h">
+      <Filter>Header Files\Input</Filter>
+    </ClInclude>
+    <ClInclude Include="Keys.h">
+      <Filter>Header Files\Input</Filter>
+    </ClInclude>
+    <ClInclude Include="KeyInformation.h">
+      <Filter>Header Files\Input</Filter>
+    </ClInclude>
+    <ClInclude Include="Keyboard.h">
+      <Filter>Header Files\Input</Filter>
+    </ClInclude>
+    <ClInclude Include="AsciiImage.h">
+      <Filter>Header Files\Drawing</Filter>
+    </ClInclude>
+    <ClInclude Include="Targetver.h">
+      <Filter>Header Files\Misc</Filter>
+    </ClInclude>
+    <ClInclude Include="Stdafx.h">
+      <Filter>Header Files\Misc</Filter>
+    </ClInclude>
+    <ClInclude Include="resource.h">
+      <Filter>Header Files\Misc</Filter>
+    </ClInclude>
+    <ClInclude Include="ControlHandler.h">
+      <Filter>Header Files\Input</Filter>
+    </ClInclude>
+    <ClInclude Include="EventHandler.h">
+      <Filter>Header Files\Input</Filter>
+    </ClInclude>
+    <ClInclude Include="Frame.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="ComponentButton.h">
+      <Filter>Header Files\Components</Filter>
+    </ClInclude>
+    <ClInclude Include="FrameCanvas.h">
+      <Filter>Header Files\Frames</Filter>
+    </ClInclude>
+    <ClInclude Include="ComponentList.h">
+      <Filter>Header Files\Components</Filter>
+    </ClInclude>
+    <ClInclude Include="ComponentCharacterGrid.h">
+      <Filter>Header Files\Components</Filter>
+    </ClInclude>
+    <ClInclude Include="ComponentColorPalette.h">
+      <Filter>Header Files\Components</Filter>
+    </ClInclude>
+    <ClInclude Include="ComponentCharacterDisplay.h">
+      <Filter>Header Files\Components</Filter>
+    </ClInclude>
+    <ClInclude Include="ComponentFrameList.h">
+      <Filter>Header Files\Components</Filter>
+    </ClInclude>
+    <ClInclude Include="ComponentCanvas.h">
+      <Filter>Header Files\Components</Filter>
+    </ClInclude>
+    <ClInclude Include="ComponentScrollBar.h">
+      <Filter>Header Files\Components</Filter>
+    </ClInclude>
+    <ClInclude Include="ToolPen.h">
+      <Filter>Header Files\Tools</Filter>
+    </ClInclude>
+    <ClInclude Include="AsciiArtist.h">
+      <Filter>Header Files\AsciiArtist</Filter>
+    </ClInclude>
+    <ClInclude Include="Tool.h">
+      <Filter>Header Files\AsciiArtist</Filter>
+    </ClInclude>
+    <ClInclude Include="AsciiArtistManager.h">
+      <Filter>Header Files\AsciiArtist</Filter>
+    </ClInclude>
+    <ClInclude Include="ToolLine.h">
+      <Filter>Header Files\Tools</Filter>
+    </ClInclude>
+    <ClInclude Include="ToolSquare.h">
+      <Filter>Header Files\Tools</Filter>
+    </ClInclude>
+    <ClInclude Include="ToolCircle.h">
+      <Filter>Header Files\Tools</Filter>
+    </ClInclude>
+    <ClInclude Include="ToolFlood.h">
+      <Filter>Header Files\Tools</Filter>
+    </ClInclude>
+    <ClInclude Include="ToolReplace.h">
+      <Filter>Header Files\Tools</Filter>
+    </ClInclude>
+    <ClInclude Include="ToolSelect.h">
+      <Filter>Header Files\Tools</Filter>
+    </ClInclude>
+    <ClInclude Include="UndoAction.h">
+      <Filter>Header Files\AsciiArtist</Filter>
+    </ClInclude>
+    <ClInclude Include="ComponentStatusBar.h">
+      <Filter>Header Files\Components</Filter>
+    </ClInclude>
+    <ClInclude Include="ComponentTextBox.h">
+      <Filter>Header Files\Components</Filter>
+    </ClInclude>
+    <ClInclude Include="ComponentWindow.h">
+      <Filter>Header Files\Components</Filter>
+    </ClInclude>
+    <ClInclude Include="FrameFileDialog.h">
+      <Filter>Header Files\Frames</Filter>
+    </ClInclude>
+    <ClInclude Include="ComponentFileList.h">
+      <Filter>Header Files\Components</Filter>
+    </ClInclude>
+    <ClInclude Include="ComponentFileShortcutList.h">
+      <Filter>Header Files\Components</Filter>
+    </ClInclude>
+    <ClInclude Include="ComponentMessageBox.h">
+      <Filter>Header Files\Components</Filter>
+    </ClInclude>
+    <ClInclude Include="ComponentTranslateDialog.h">
+      <Filter>Header Files\Components</Filter>
+    </ClInclude>
+    <ClInclude Include="ComponentResizeDialog.h">
+      <Filter>Header Files\Components</Filter>
+    </ClInclude>
+    <ClInclude Include="ToolText.h">
+      <Filter>Header Files\Tools</Filter>
+    </ClInclude>
+    <ClInclude Include="ComponentAnimationSpeedDialog.h">
+      <Filter>Header Files\Components</Filter>
+    </ClInclude>
+    <ClInclude Include="ComponentImageSettingsDialog.h">
+      <Filter>Header Files\Components</Filter>
+    </ClInclude>
+    <ClInclude Include="ComponentImportFileDialog.h">
+      <Filter>Header Files\Components</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="Main.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Geometry.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="IOStream.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="FileManager.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="ConsoleApp.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="HiddenWinAPI.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Stdafx.cpp">
+      <Filter>Source Files\Misc</Filter>
+    </ClCompile>
+    <ClCompile Include="AsciiImage.cpp">
+      <Filter>Source Files\Drawing</Filter>
+    </ClCompile>
+    <ClCompile Include="AsciiImageBase.cpp">
+      <Filter>Source Files\Drawing</Filter>
+    </ClCompile>
+    <ClCompile Include="AsciiImageInfo.cpp">
+      <Filter>Source Files\Drawing</Filter>
+    </ClCompile>
+    <ClCompile Include="Keyboard.cpp">
+      <Filter>Source Files\Input</Filter>
+    </ClCompile>
+    <ClCompile Include="Mouse.cpp">
+      <Filter>Source Files\Input</Filter>
+    </ClCompile>
+    <ClCompile Include="ControlHandler.cpp">
+      <Filter>Source Files\Input</Filter>
+    </ClCompile>
+    <ClCompile Include="EventHandler.cpp">
+      <Filter>Source Files\Input</Filter>
+    </ClCompile>
+    <ClCompile Include="Component.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Frame.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="ComponentButton.cpp">
+      <Filter>Source Files\Components</Filter>
+    </ClCompile>
+    <ClCompile Include="FrameCanvas.cpp">
+      <Filter>Source Files\Frames</Filter>
+    </ClCompile>
+    <ClCompile Include="ComponentList.cpp">
+      <Filter>Source Files\Components</Filter>
+    </ClCompile>
+    <ClCompile Include="ComponentCharacterGrid.cpp">
+      <Filter>Source Files\Components</Filter>
+    </ClCompile>
+    <ClCompile Include="ComponentColorPalette.cpp">
+      <Filter>Source Files\Components</Filter>
+    </ClCompile>
+    <ClCompile Include="ComponentCharacterDisplay.cpp">
+      <Filter>Source Files\Components</Filter>
+    </ClCompile>
+    <ClCompile Include="ComponentScrollBar.cpp">
+      <Filter>Source Files\Components</Filter>
+    </ClCompile>
+    <ClCompile Include="ComponentCanvas.cpp">
+      <Filter>Source Files\Components</Filter>
+    </ClCompile>
+    <ClCompile Include="ComponentFrameList.cpp">
+      <Filter>Source Files\Components</Filter>
+    </ClCompile>
+    <ClCompile Include="ToolPen.cpp">
+      <Filter>Source Files\Tools</Filter>
+    </ClCompile>
+    <ClCompile Include="Tool.cpp">
+      <Filter>Source Files\AsciiArtist</Filter>
+    </ClCompile>
+    <ClCompile Include="AsciiArtist.cpp">
+      <Filter>Source Files\AsciiArtist</Filter>
+    </ClCompile>
+    <ClCompile Include="AsciiArtistManager.cpp">
+      <Filter>Source Files\AsciiArtist</Filter>
+    </ClCompile>
+    <ClCompile Include="ToolLine.cpp">
+      <Filter>Source Files\Tools</Filter>
+    </ClCompile>
+    <ClCompile Include="ToolSquare.cpp">
+      <Filter>Source Files\Tools</Filter>
+    </ClCompile>
+    <ClCompile Include="ToolCircle.cpp">
+      <Filter>Source Files\Tools</Filter>
+    </ClCompile>
+    <ClCompile Include="ToolFlood.cpp">
+      <Filter>Source Files\Tools</Filter>
+    </ClCompile>
+    <ClCompile Include="ToolReplace.cpp">
+      <Filter>Source Files\Tools</Filter>
+    </ClCompile>
+    <ClCompile Include="ToolSelect.cpp">
+      <Filter>Source Files\Tools</Filter>
+    </ClCompile>
+    <ClCompile Include="UndoAction.cpp">
+      <Filter>Source Files\AsciiArtist</Filter>
+    </ClCompile>
+    <ClCompile Include="ComponentStatusBar.cpp">
+      <Filter>Source Files\Components</Filter>
+    </ClCompile>
+    <ClCompile Include="ComponentTextBox.cpp">
+      <Filter>Source Files\Components</Filter>
+    </ClCompile>
+    <ClCompile Include="ComponentWindow.cpp">
+      <Filter>Source Files\Components</Filter>
+    </ClCompile>
+    <ClCompile Include="FrameFileDialog.cpp">
+      <Filter>Source Files\Frames</Filter>
+    </ClCompile>
+    <ClCompile Include="ComponentFileList.cpp">
+      <Filter>Source Files\Components</Filter>
+    </ClCompile>
+    <ClCompile Include="ComponentFileShortcutList.cpp">
+      <Filter>Source Files\Components</Filter>
+    </ClCompile>
+    <ClCompile Include="ComponentMessageBox.cpp">
+      <Filter>Source Files\Components</Filter>
+    </ClCompile>
+    <ClCompile Include="ComponentTranslateDialog.cpp">
+      <Filter>Source Files\Components</Filter>
+    </ClCompile>
+    <ClCompile Include="ComponentResizeDialog.cpp">
+      <Filter>Source Files\Components</Filter>
+    </ClCompile>
+    <ClCompile Include="ToolText.cpp">
+      <Filter>Source Files\Tools</Filter>
+    </ClCompile>
+    <ClCompile Include="ComponentAnimationSpeedDialog.cpp">
+      <Filter>Source Files\Components</Filter>
+    </ClCompile>
+    <ClCompile Include="ComponentImageSettingsDialog.cpp">
+      <Filter>Source Files\Components</Filter>
+    </ClCompile>
+    <ClCompile Include="ComponentImportFileDialog.cpp">
+      <Filter>Source Files\Components</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ResourceCompile Include="Resource.rc">
+      <Filter>Resource Files</Filter>
+    </ResourceCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Buttons\Paste.asc">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="Resources\Buttons\AnimationSpeed.asc">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="Resources\AnimationSpeedDialog.asc">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="Resources\CharacterGrid.asc">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="Resources\ColorPalette.asc">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="Resources\Buttons\Copy.asc">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="Resources\Buttons\Cut.asc">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="Resources\Buttons\Delete.asc">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="Resources\Buttons\DeleteFrame.asc">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="Resources\Buttons\DuplicateFrame.asc">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="Resources\Buttons\Help.asc">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="Resources\ImageSettingsDialog.asc">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="Resources\MessageBox.asc">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="Resources\Buttons\MoveFrameDown.asc">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="Resources\Buttons\MoveFrameUp.asc">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="Resources\Buttons\NewFile.asc">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="Resources\Buttons\NewFrame.asc">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="Resources\Buttons\OpenFile.asc">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="Resources\Buttons\UndoDisabled.asc">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="Resources\Buttons\Redo.asc">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="Resources\Buttons\RedoDisabled.asc">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="Resources\Buttons\Resize.asc">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="Resources\ResizeDialog.asc">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="Resources\Buttons\SaveAsFile.asc">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="Resources\Buttons\SaveBitmap.asc">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="Resources\Buttons\SaveFile.asc">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="Resources\Buttons\SelectAll.asc">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="Resources\Buttons\Translate.asc">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="Resources\TranslateDialog.asc">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="Resources\UIFileDialog.asc">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="Resources\UIFramesBottom.asc">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="Resources\UIFramesTop.asc">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="Resources\UIMain.asc">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="Resources\UIMain2.asc">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="Resources\UIStatusBar.asc">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="Resources\Buttons\Undo.asc">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="Resources\Buttons\ImportFile.asc">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="Resources\ImportFileDialog.asc">
+      <Filter>Resource Files</Filter>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <Image Include="Resources\App.ico">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="Resources\Asc.ico">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="App.ico">
+      <Filter>Resource Files</Filter>
+    </Image>
+  </ItemGroup>
+</Project>

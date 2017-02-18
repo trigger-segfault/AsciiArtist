@@ -27,3 +27,15 @@
 *.exe
 *.out
 *.app
+
+# Visual Studio
+*.suo
+.vs/*
+ipch/*
+*.user
+*.VC.db
+*/obj/*
+bin/*
+
+
+desktop.ini
