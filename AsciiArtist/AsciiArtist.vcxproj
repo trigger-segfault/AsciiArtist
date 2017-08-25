@@ -9,11 +9,20 @@
       <Configuration>Release</Configuration>
       <Platform>Win32</Platform>
     </ProjectConfiguration>
+    <ProjectConfiguration Include="Debug|x64">
+      <Configuration>Debug</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|x64">
+      <Configuration>Release</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
   </ItemGroup>
   <PropertyGroup Label="Globals">
-    <ProjectGuid>{514087AB-A690-4D8E-8DE2-B96BF1D5A366}</ProjectGuid>
+    <ProjectGuid>{0CC0F0F4-8041-4F01-B186-A1071367BB3D}</ProjectGuid>
     <Keyword>Win32Proj</Keyword>
     <RootNamespace>AsciiArtist</RootNamespace>
+    <WindowsTargetPlatformVersion>10.0.14393.0</WindowsTargetPlatformVersion>
   </PropertyGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
@@ -29,8 +38,23 @@
     <WholeProgramOptimization>true</WholeProgramOptimization>
     <CharacterSet>Unicode</CharacterSet>
   </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <PlatformToolset>v140</PlatformToolset>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <PlatformToolset>v140</PlatformToolset>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
   <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Label="Shared">
   </ImportGroup>
   <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
     <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
@@ -38,16 +62,26 @@
   <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
     <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
   </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
   <PropertyGroup Label="UserMacros" />
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
     <LinkIncremental>true</LinkIncremental>
-    <OutDir>$(SolutionDir)bin\$(Configuration)\</OutDir>
-    <IntDir>obj\$(Configuration)\</IntDir>
+    <IncludePath>$(ProjectDir);$(ProjectDir)..\PowerConsoleLib\;$(IncludePath)</IncludePath>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <LinkIncremental>true</LinkIncremental>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
     <LinkIncremental>false</LinkIncremental>
-    <OutDir>$(SolutionDir)bin\$(Configuration)\</OutDir>
-    <IntDir>obj\$(Configuration)\</IntDir>
+    <IncludePath>$(ProjectDir);$(ProjectDir)..\PowerConsoleLib\;$(IncludePath)</IncludePath>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <LinkIncremental>false</LinkIncremental>
   </PropertyGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
     <ClCompile>
@@ -56,7 +90,22 @@
       <Optimization>Disabled</Optimization>
       <PreprocessorDefinitions>WIN32;_DEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <SDLCheck>true</SDLCheck>
-      <GenerateXMLDocumentationFiles>false</GenerateXMLDocumentationFiles>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <PrecompiledHeaderFile>Stdafx.h</PrecompiledHeaderFile>
+      <AdditionalOptions>/std:c++latest %(AdditionalOptions)</AdditionalOptions>
+    </ClCompile>
+    <Link>
+      <SubSystem>Console</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <AdditionalDependencies>%(AdditionalDependencies)</AdditionalDependencies>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <ClCompile>
+      <PrecompiledHeader>Use</PrecompiledHeader>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>Disabled</Optimization>
+      <PreprocessorDefinitions>_DEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
     </ClCompile>
     <Link>
       <SubSystem>Console</SubSystem>
@@ -71,195 +120,209 @@
       <FunctionLevelLinking>true</FunctionLevelLinking>
       <IntrinsicFunctions>true</IntrinsicFunctions>
       <PreprocessorDefinitions>WIN32;NDEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
-      <SDLCheck>true</SDLCheck>
-      <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
+      <AdditionalOptions>/std:c++latest %(AdditionalOptions)</AdditionalOptions>
     </ClCompile>
     <Link>
       <SubSystem>Console</SubSystem>
-      <GenerateDebugInformation>true</GenerateDebugInformation>
       <EnableCOMDATFolding>true</EnableCOMDATFolding>
       <OptimizeReferences>true</OptimizeReferences>
-      <LinkTimeCodeGeneration>UseLinkTimeCodeGeneration</LinkTimeCodeGeneration>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <PrecompiledHeader>Use</PrecompiledHeader>
+      <Optimization>MaxSpeed</Optimization>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <PreprocessorDefinitions>NDEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+    </ClCompile>
+    <Link>
+      <SubSystem>Console</SubSystem>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
     <Text Include="Readme.txt" />
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="AsciiArtist.h">
-      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">false</ExcludedFromBuild>
-    </ClInclude>
-    <ClInclude Include="AsciiArtistManager.h" />
-    <ClInclude Include="AsciiImage.h" />
-    <ClInclude Include="BorderDrawing.h">
-      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
-      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
-    </ClInclude>
-    <ClInclude Include="Component.h" />
-    <ClInclude Include="ComponentAnimationSpeedDialog.h" />
-    <ClInclude Include="ComponentButton.h" />
-    <ClInclude Include="ComponentCanvas.h" />
-    <ClInclude Include="ComponentCharacterDisplay.h" />
-    <ClInclude Include="ComponentCharacterGrid.h" />
-    <ClInclude Include="ComponentColorPalette.h" />
-    <ClInclude Include="ComponentFileShortcutList.h" />
-    <ClInclude Include="ComponentFrameList.h" />
-    <ClInclude Include="ComponentFileList.h" />
-    <ClInclude Include="ComponentImageSettingsDialog.h" />
-    <ClInclude Include="ComponentImportFileDialog.h" />
-    <ClInclude Include="ComponentList.h" />
-    <ClInclude Include="ComponentMessageBox.h" />
-    <ClInclude Include="ComponentResizeDialog.h" />
-    <ClInclude Include="ComponentScrollBar.h">
-      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">false</ExcludedFromBuild>
-    </ClInclude>
-    <ClInclude Include="ComponentStatusBar.h" />
-    <ClInclude Include="ComponentTextBox.h" />
-    <ClInclude Include="ComponentTranslateDialog.h" />
-    <ClInclude Include="ComponentWindow.h" />
-    <ClInclude Include="ConsoleApp.h" />
-    <ClInclude Include="ControlHandler.h" />
-    <ClInclude Include="EventHandler.h">
-      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
-      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
-    </ClInclude>
-    <ClInclude Include="FileManager.h" />
-    <ClInclude Include="FrameCanvas.h" />
-    <ClInclude Include="FrameFileDialog.h" />
-    <ClInclude Include="Geometry.h" />
-    <ClInclude Include="HiddenWinAPI.h" />
-    <ClInclude Include="IOStream.h" />
-    <ClInclude Include="Keyboard.h" />
-    <ClInclude Include="KeyInformation.h">
-      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
-      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
-    </ClInclude>
-    <ClInclude Include="Keys.h" />
-    <ClInclude Include="Mouse.h" />
-    <ClInclude Include="MouseButtons.h" />
-    <ClInclude Include="resource.h" />
-    <ClInclude Include="Frame.h">
-      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">false</ExcludedFromBuild>
-    </ClInclude>
-    <ClInclude Include="Stdafx.h" />
-    <ClInclude Include="Targetver.h" />
-    <ClInclude Include="Tool.h" />
-    <ClInclude Include="ToolCircle.h" />
-    <ClInclude Include="ToolFlood.h" />
-    <ClInclude Include="ToolLine.h" />
-    <ClInclude Include="ToolPen.h" />
-    <ClInclude Include="ToolReplace.h" />
-    <ClInclude Include="ToolSelect.h" />
-    <ClInclude Include="ToolSquare.h" />
-    <ClInclude Include="ToolText.h" />
-    <ClInclude Include="UndoAction.h" />
+    <ClInclude Include="AsciiArtist\AsciiArtistWindow.h" />
+    <ClInclude Include="AsciiArtist\COM\COM.h" />
+    <ClInclude Include="AsciiArtist\Editing\AsciiArtistEnums.h" />
+    <ClInclude Include="AsciiArtist\Editing\Asciifier.h" />
+    <ClInclude Include="AsciiArtist\Editing\ImageSettings.h" />
+    <ClInclude Include="AsciiArtist\Editing\PixelRepresentation.h" />
+    <ClInclude Include="AsciiArtist\Editing\ToolOptions.h" />
+    <ClInclude Include="AsciiArtist\Editing\Tools\BlankTool.h" />
+    <ClInclude Include="AsciiArtist\Editing\Tools\BorderTool.h" />
+    <ClInclude Include="AsciiArtist\Editing\Tools\CircleTool.h" />
+    <ClInclude Include="AsciiArtist\Editing\Tools\EyedropperTool.h" />
+    <ClInclude Include="AsciiArtist\Editing\Tools\FloodTool.h" />
+    <ClInclude Include="AsciiArtist\Editing\Tools\PenTool.h" />
+    <ClInclude Include="AsciiArtist\Editing\Tools\LineTool.h" />
+    <ClInclude Include="AsciiArtist\Editing\Tools\SelectTool.h" />
+    <ClInclude Include="AsciiArtist\Editing\Tools\SquareTool.h" />
+    <ClInclude Include="AsciiArtist\Editing\Tools\TextTool.h" />
+    <ClInclude Include="AsciiArtist\Editing\UndoActions\FrameSpeedUndoAction.h" />
+    <ClInclude Include="AsciiArtist\Editing\UndoActions\AnimationUndoAction.h" />
+    <ClInclude Include="AsciiArtist\Editing\UndoActions\BlankUndoAction.h" />
+    <ClInclude Include="AsciiArtist\Editing\UndoActions\FormatUndoAction.h" />
+    <ClInclude Include="AsciiArtist\Editing\UndoActions\FrameUndoAction.h" />
+    <ClInclude Include="AsciiArtist\Editing\UndoActions\DrawUndoAction.h" />
+    <ClInclude Include="AsciiArtist\Editing\UndoActions\SettingsUndoAction.h" />
+    <ClInclude Include="AsciiArtist\COM\WIC.h" />
+    <ClInclude Include="AsciiArtist\Settings.h" />
+    <ClInclude Include="AsciiArtist\Toolbox\Controls\PixelBookmarker.h" />
+    <ClInclude Include="AsciiArtist\Toolbox\Dialogs\AboutDialog.h" />
+    <ClInclude Include="AsciiArtist\Toolbox\Dialogs\FontChooser.h" />
+    <ClInclude Include="AsciiArtist\Toolbox\Dialogs\ImportImageDialog.h" />
+    <ClInclude Include="AsciiArtist\Toolbox\Controls\Canvas.h" />
+    <ClInclude Include="AsciiArtist\Editing\UndoAction.h" />
+    <ClInclude Include="AsciiArtist\Toolbox\Dialogs\AsciiImageFileDialog.h" />
+    <ClInclude Include="AsciiArtist\Editing\Tool.h" />
+    <ClInclude Include="AsciiArtist\Toolbox\AsciiArtistEventArgs.h" />
+    <ClInclude Include="AsciiArtist\Toolbox\Controls\CharacterGrid.h" />
+    <ClInclude Include="AsciiArtist\Toolbox\Controls\ColorPalette.h" />
+    <ClInclude Include="AsciiArtist\Toolbox\Dialogs\LoadingDialog.h" />
+    <ClInclude Include="AsciiArtist\Toolbox\Dialogs\PaletteEditor.h" />
+    <ClInclude Include="AsciiArtist\Toolbox\Controls\PixelDisplay.h" />
+    <ClInclude Include="AsciiArtist\Toolbox\Dialogs\PixelPickerDialog.h" />
+    <ClInclude Include="AsciiArtist\Toolbox\FrameCollection.h" />
+    <ClInclude Include="AsciiArtist\Toolbox\Controls\FrameListBox.h" />
+    <ClInclude Include="AsciiArtist\Toolbox\Dialogs\FrameSpeedDialogBox.h" />
+    <ClInclude Include="AsciiArtist\Toolbox\Dialogs\ImageSettingsDialog.h" />
+    <ClInclude Include="AsciiArtist\Toolbox\Dialogs\ImportFileDialog.h" />
+    <ClInclude Include="AsciiArtist\Toolbox\Dialogs\ResizeDialogBox.h" />
+    <ClInclude Include="AsciiArtist\Toolbox\Controls\StatusBar.h" />
+    <ClInclude Include="AsciiArtist\Toolbox\Dialogs\TranslateDialogBox.h" />
+    <ClInclude Include="resources.h" />
+    <ClInclude Include="stdafx.h" />
+    <ClInclude Include="targetver.h" />
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="AsciiArtist.cpp" />
-    <ClCompile Include="AsciiArtistManager.cpp" />
-    <ClCompile Include="AsciiImage.cpp" />
-    <ClCompile Include="AsciiImageBase.cpp" />
-    <ClCompile Include="AsciiImageInfo.cpp" />
-    <ClCompile Include="Component.cpp" />
-    <ClCompile Include="ComponentAnimationSpeedDialog.cpp" />
-    <ClCompile Include="ComponentButton.cpp" />
-    <ClCompile Include="ComponentCanvas.cpp" />
-    <ClCompile Include="ComponentCharacterDisplay.cpp" />
-    <ClCompile Include="ComponentCharacterGrid.cpp" />
-    <ClCompile Include="ComponentColorPalette.cpp" />
-    <ClCompile Include="ComponentFileList.cpp" />
-    <ClCompile Include="ComponentFileShortcutList.cpp" />
-    <ClCompile Include="ComponentFrameList.cpp" />
-    <ClCompile Include="ComponentImageSettingsDialog.cpp" />
-    <ClCompile Include="ComponentImportFileDialog.cpp" />
-    <ClCompile Include="ComponentList.cpp" />
-    <ClCompile Include="ComponentMessageBox.cpp" />
-    <ClCompile Include="ComponentResizeDialog.cpp" />
-    <ClCompile Include="ComponentScrollBar.cpp">
-      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">false</ExcludedFromBuild>
-    </ClCompile>
-    <ClCompile Include="ComponentStatusBar.cpp" />
-    <ClCompile Include="ComponentTextBox.cpp" />
-    <ClCompile Include="ComponentTranslateDialog.cpp" />
-    <ClCompile Include="ComponentWindow.cpp" />
-    <ClCompile Include="ConsoleApp.cpp" />
-    <ClCompile Include="ControlHandler.cpp" />
-    <ClCompile Include="EventHandler.cpp">
-      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
-      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
-    </ClCompile>
-    <ClCompile Include="FileManager.cpp" />
-    <ClCompile Include="Frame.cpp" />
-    <ClCompile Include="FrameCanvas.cpp" />
-    <ClCompile Include="FrameFileDialog.cpp" />
-    <ClCompile Include="Geometry.cpp" />
-    <ClCompile Include="HiddenWinAPI.cpp" />
-    <ClCompile Include="IOStream.cpp" />
-    <ClCompile Include="Keyboard.cpp" />
+    <ClCompile Include="AsciiArtist\AsciiArtistWindow.cpp" />
+    <ClCompile Include="AsciiArtist\Editing\Asciifier.cpp" />
+    <ClCompile Include="AsciiArtist\Editing\ImageSettings.cpp" />
+    <ClCompile Include="AsciiArtist\Editing\PixelRepresentation.cpp" />
+    <ClCompile Include="AsciiArtist\Editing\Tool.cpp" />
+    <ClCompile Include="AsciiArtist\Editing\Tools\BlankTool.cpp" />
+    <ClCompile Include="AsciiArtist\Editing\Tools\BorderTool.cpp" />
+    <ClCompile Include="AsciiArtist\Editing\Tools\CircleTool.cpp" />
+    <ClCompile Include="AsciiArtist\Editing\Tools\EyedropperTool.cpp" />
+    <ClCompile Include="AsciiArtist\Editing\Tools\FloodTool.cpp" />
+    <ClCompile Include="AsciiArtist\Editing\Tools\LineTool.cpp" />
+    <ClCompile Include="AsciiArtist\Editing\Tools\PenTool.cpp" />
+    <ClCompile Include="AsciiArtist\Editing\Tools\SelectTool.cpp" />
+    <ClCompile Include="AsciiArtist\Editing\Tools\SquareTool.cpp" />
+    <ClCompile Include="AsciiArtist\Editing\Tools\TextTool.cpp" />
+    <ClCompile Include="AsciiArtist\Editing\UndoAction.cpp" />
+    <ClCompile Include="AsciiArtist\Editing\UndoActions\FrameSpeedUndoAction.cpp" />
+    <ClCompile Include="AsciiArtist\Editing\UndoActions\AnimationUndoAction.cpp" />
+    <ClCompile Include="AsciiArtist\Editing\UndoActions\BlankUndoAction.cpp" />
+    <ClCompile Include="AsciiArtist\Editing\UndoActions\FormatUndoAction.cpp" />
+    <ClCompile Include="AsciiArtist\Editing\UndoActions\FrameUndoAction.cpp" />
+    <ClCompile Include="AsciiArtist\Editing\UndoActions\DrawUndoAction.cpp" />
+    <ClCompile Include="AsciiArtist\Editing\UndoActions\SettingsUndoAction.cpp" />
+    <ClCompile Include="AsciiArtist\COM\WIC.cpp" />
+    <ClCompile Include="AsciiArtist\Settings.cpp" />
+    <ClCompile Include="AsciiArtist\Toolbox\Controls\PixelBookmarker.cpp" />
+    <ClCompile Include="AsciiArtist\Toolbox\Dialogs\AboutDialog.cpp" />
+    <ClCompile Include="AsciiArtist\Toolbox\Dialogs\FontChooser.cpp" />
+    <ClCompile Include="AsciiArtist\Toolbox\Dialogs\ImportImageDialog.cpp" />
+    <ClCompile Include="AsciiArtist\Toolbox\Dialogs\AsciiImageFileDialog.cpp" />
+    <ClCompile Include="AsciiArtist\Toolbox\Controls\Canvas.cpp" />
+    <ClCompile Include="AsciiArtist\Toolbox\Controls\CharacterGrid.cpp" />
+    <ClCompile Include="AsciiArtist\Toolbox\Controls\ColorPalette.cpp" />
+    <ClCompile Include="AsciiArtist\Toolbox\Dialogs\LoadingDialog.cpp" />
+    <ClCompile Include="AsciiArtist\Toolbox\FrameCollection.cpp" />
+    <ClCompile Include="AsciiArtist\Toolbox\Controls\FrameListBox.cpp" />
+    <ClCompile Include="AsciiArtist\Toolbox\Dialogs\FrameSpeedDialogBox.cpp" />
+    <ClCompile Include="AsciiArtist\Toolbox\Dialogs\ImageSettingsDialog.cpp" />
+    <ClCompile Include="AsciiArtist\Toolbox\Dialogs\ImportFileDialog.cpp" />
+    <ClCompile Include="AsciiArtist\Toolbox\Dialogs\PaletteEditor.cpp" />
+    <ClCompile Include="AsciiArtist\Toolbox\Controls\PixelDisplay.cpp" />
+    <ClCompile Include="AsciiArtist\Toolbox\Dialogs\PixelPickerDialog.cpp" />
+    <ClCompile Include="AsciiArtist\Toolbox\Dialogs\ResizeDialogBox.cpp" />
+    <ClCompile Include="AsciiArtist\Toolbox\Controls\StatusBar.cpp" />
+    <ClCompile Include="AsciiArtist\Toolbox\Dialogs\TranslateDialogBox.cpp" />
     <ClCompile Include="Main.cpp" />
-    <ClCompile Include="Mouse.cpp" />
-    <ClCompile Include="Stdafx.cpp">
+    <ClCompile Include="stdafx.cpp">
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Create</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">Create</PrecompiledHeader>
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Create</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|x64'">Create</PrecompiledHeader>
     </ClCompile>
-    <ClCompile Include="Tool.cpp" />
-    <ClCompile Include="ToolCircle.cpp" />
-    <ClCompile Include="ToolFlood.cpp" />
-    <ClCompile Include="ToolLine.cpp" />
-    <ClCompile Include="ToolPen.cpp" />
-    <ClCompile Include="ToolReplace.cpp" />
-    <ClCompile Include="ToolSelect.cpp" />
-    <ClCompile Include="ToolSquare.cpp" />
-    <ClCompile Include="ToolText.cpp" />
-    <ClCompile Include="UndoAction.cpp" />
   </ItemGroup>
   <ItemGroup>
-    <ResourceCompile Include="Resource.rc" />
+    <ResourceCompile Include="resources.rc" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\AnimationSpeedDialog.asc" />
-    <None Include="Resources\Buttons\AnimationSpeed.asc" />
+    <ProjectReference Include="..\PowerConsoleLib\PowerConsoleLib.vcxproj">
+      <Project>{b571c836-8f8a-4a07-b42b-b93c98690426}</Project>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Image Include="Resources\App.ico" />
+    <Image Include="Resources\Asc.ico" />
+    <Image Include="Resources\Font.bmp" />
+    <Image Include="Resources\Font.png" />
+    <Image Include="Resources\Fonts\10x18.png" />
+    <Image Include="Resources\Fonts\12x16.png" />
+    <Image Include="Resources\Fonts\16x12.png" />
+    <Image Include="Resources\Fonts\16x8.png" />
+    <Image Include="Resources\Fonts\4x6.png" />
+    <Image Include="Resources\Fonts\5x12.png" />
+    <Image Include="Resources\Fonts\6x8.png" />
+    <Image Include="Resources\Fonts\7x12.png" />
+    <Image Include="Resources\Fonts\8x12.png" />
+    <Image Include="Resources\Fonts\8x8.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="resources\ascii_im.bin" />
+    <None Include="Resources\Buttons\About.asc" />
     <None Include="Resources\Buttons\Copy.asc" />
     <None Include="Resources\Buttons\Cut.asc" />
     <None Include="Resources\Buttons\Delete.asc" />
     <None Include="Resources\Buttons\DeleteFrame.asc" />
     <None Include="Resources\Buttons\DuplicateFrame.asc" />
+    <None Include="Resources\Buttons\ExportFile.asc" />
+    <None Include="Resources\Buttons\ExportGif.asc" />
+    <None Include="Resources\Buttons\ExportImage.asc" />
+    <None Include="Resources\Buttons\ExportVideo.asc" />
+    <None Include="Resources\Buttons\FrameSpeed.asc" />
     <None Include="Resources\Buttons\Help.asc" />
+    <None Include="Resources\Buttons\ImageSettings.asc" />
     <None Include="Resources\Buttons\ImportFile.asc" />
+    <None Include="Resources\Buttons\ImportImage.asc" />
     <None Include="Resources\Buttons\MoveFrameDown.asc" />
     <None Include="Resources\Buttons\MoveFrameUp.asc" />
     <None Include="Resources\Buttons\NewFile.asc" />
     <None Include="Resources\Buttons\NewFrame.asc" />
     <None Include="Resources\Buttons\OpenFile.asc" />
     <None Include="Resources\Buttons\Paste.asc" />
+    <None Include="Resources\Buttons\PlayOff.asc" />
+    <None Include="Resources\Buttons\PlayOn.asc" />
+    <None Include="Resources\Buttons\ProgramSettings.asc" />
     <None Include="Resources\Buttons\Redo.asc" />
-    <None Include="Resources\Buttons\RedoDisabled.asc" />
+    <None Include="Resources\Buttons\RenameFrame.asc" />
     <None Include="Resources\Buttons\Resize.asc" />
     <None Include="Resources\Buttons\SaveAsFile.asc" />
-    <None Include="Resources\Buttons\SaveBitmap.asc" />
     <None Include="Resources\Buttons\SaveFile.asc" />
+    <None Include="Resources\Buttons\SavePng.asc" />
     <None Include="Resources\Buttons\SelectAll.asc" />
+    <None Include="Resources\Buttons\ShowSpeedOff.asc" />
+    <None Include="Resources\Buttons\ShowSpeedOn.asc" />
+    <None Include="Resources\Buttons\StopOff.asc" />
+    <None Include="Resources\Buttons\StopOn.asc" />
     <None Include="Resources\Buttons\Translate.asc" />
     <None Include="Resources\Buttons\Undo.asc" />
-    <None Include="Resources\Buttons\UndoDisabled.asc" />
     <None Include="Resources\CharacterGrid.asc" />
     <None Include="Resources\ColorPalette.asc" />
-    <None Include="Resources\ImageSettingsDialog.asc" />
-    <None Include="Resources\ImportFileDialog.asc" />
-    <None Include="Resources\MessageBox.asc" />
-    <None Include="Resources\ResizeDialog.asc" />
-    <None Include="Resources\TranslateDialog.asc" />
-    <None Include="Resources\UIFileDialog.asc" />
-    <None Include="Resources\UIFramesBottom.asc" />
-    <None Include="Resources\UIFramesTop.asc" />
-    <None Include="Resources\UIMain.asc" />
-    <None Include="Resources\UIMain2.asc" />
-    <None Include="Resources\UIStatusBar.asc" />
-  </ItemGroup>
-  <ItemGroup>
-    <Image Include="App.ico" />
-    <Image Include="Resources\App.ico" />
-    <Image Include="Resources\Asc.ico" />
+    <None Include="Resources\LogoSmall.asc" />
+    <None Include="Settings.ini" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

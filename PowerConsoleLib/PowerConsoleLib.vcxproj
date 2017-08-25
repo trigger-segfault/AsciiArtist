@@ -1,0 +1,326 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="14.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Debug|x64">
+      <Configuration>Debug</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|x64">
+      <Configuration>Release</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>{B571C836-8F8A-4A07-B42B-B93C98690426}</ProjectGuid>
+    <Keyword>Win32Proj</Keyword>
+    <RootNamespace>PowerConsoleLib</RootNamespace>
+    <WindowsTargetPlatformVersion>10.0.14393.0</WindowsTargetPlatformVersion>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>StaticLibrary</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <PlatformToolset>v140</PlatformToolset>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>StaticLibrary</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <PlatformToolset>v140</PlatformToolset>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="Configuration">
+    <ConfigurationType>StaticLibrary</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <PlatformToolset>v140</PlatformToolset>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="Configuration">
+    <ConfigurationType>StaticLibrary</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <PlatformToolset>v140</PlatformToolset>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Label="Shared">
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <IncludePath>$(ProjectDir);$(ProjectDir)PowerConsole\;$(IncludePath)</IncludePath>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <IncludePath>$(ProjectDir);$(ProjectDir)PowerConsole\;$(IncludePath)</IncludePath>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <ClCompile>
+      <PrecompiledHeader>Use</PrecompiledHeader>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>Disabled</Optimization>
+      <PreprocessorDefinitions>WIN32;_DEBUG;_LIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <SDLCheck>true</SDLCheck>
+      <AdditionalOptions>/std:c++latest -D_SCL_SECURE_NO_WARNINGS %(AdditionalOptions)</AdditionalOptions>
+    </ClCompile>
+    <Link>
+      <SubSystem>Windows</SubSystem>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <ClCompile>
+      <PrecompiledHeader>Use</PrecompiledHeader>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>Disabled</Optimization>
+      <PreprocessorDefinitions>_DEBUG;_LIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <SDLCheck>true</SDLCheck>
+    </ClCompile>
+    <Link>
+      <SubSystem>Windows</SubSystem>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <PrecompiledHeader>Use</PrecompiledHeader>
+      <Optimization>MaxSpeed</Optimization>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <PreprocessorDefinitions>WIN32;NDEBUG;_LIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <SDLCheck>true</SDLCheck>
+      <AdditionalOptions>/std:c++latest %(AdditionalOptions)</AdditionalOptions>
+    </ClCompile>
+    <Link>
+      <SubSystem>Windows</SubSystem>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <PrecompiledHeader>Use</PrecompiledHeader>
+      <Optimization>MaxSpeed</Optimization>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <PreprocessorDefinitions>NDEBUG;_LIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <SDLCheck>true</SDLCheck>
+    </ClCompile>
+    <Link>
+      <SubSystem>Windows</SubSystem>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <ClInclude Include="PowerConsole\Console.h" />
+    <ClInclude Include="PowerConsole\ConsoleState.h" />
+    <ClInclude Include="PowerConsole\ConsoleEnums.h" />
+    <ClInclude Include="PowerConsole\Controls\ContentControl.h" />
+    <ClInclude Include="PowerConsole\Controls\Events\Command.h" />
+    <ClInclude Include="PowerConsole\Controls\Events\CommandCollection.h" />
+    <ClInclude Include="PowerConsole\Controls\ProtectedContainerControl.h" />
+    <ClInclude Include="PowerConsole\Controls\TabStopCollection.h" />
+    <ClInclude Include="PowerConsole\Controls\IContentContainer.h" />
+    <ClInclude Include="PowerConsole\Controls\Events\Event.h" />
+    <ClInclude Include="PowerConsole\Controls\Events\EventArgs.h" />
+    <ClInclude Include="PowerConsole\Controls\IChildContainer.h" />
+    <ClInclude Include="PowerConsole\Controls\Control.h" />
+    <ClInclude Include="PowerConsole\Controls\ControlCollection.h" />
+    <ClInclude Include="PowerConsole\Controls\ContainerControl.h" />
+    <ClInclude Include="PowerConsole\Controls\ItemCollection.h" />
+    <ClInclude Include="PowerConsole\Controls\Toolbox\DialogBox.h" />
+    <ClInclude Include="PowerConsole\Controls\Toolbox\GroupBox.h" />
+    <ClInclude Include="PowerConsole\Controls\Toolbox\Image.h" />
+    <ClInclude Include="PowerConsole\Controls\Toolbox\ImageButton.h" />
+    <ClInclude Include="PowerConsole\Controls\Toolbox\MessageBox.h" />
+    <ClInclude Include="PowerConsole\Controls\Toolbox\NumericTextBox.h" />
+    <ClInclude Include="PowerConsole\Controls\Toolbox\ProgressDailog.h" />
+    <ClInclude Include="PowerConsole\Controls\Toolbox\SplitContainer.h" />
+    <ClInclude Include="PowerConsole\Controls\Toolbox\TextEditBox.h" />
+    <ClInclude Include="PowerConsole\Controls\Toolbox\YesNoToggleButton.h" />
+    <ClInclude Include="PowerConsole\Controls\WindowConsoleWrapper.h" />
+    <ClInclude Include="PowerConsole\Controls\MainWindow.h" />
+    <ClInclude Include="PowerConsole\Controls\Dialog.h" />
+    <ClInclude Include="PowerConsole\ConsoleFont.h" />
+    <ClInclude Include="PowerConsole\ConsolePalette.h" />
+    <ClInclude Include="PowerConsole\Drawing\Color.h" />
+    <ClInclude Include="PowerConsole\Geometry\GeometryEnums.h" />
+    <ClInclude Include="PowerConsole\Geometry\GMath.h" />
+    <ClInclude Include="PowerConsole\Geometry\Point.h" />
+    <ClInclude Include="PowerConsole\Geometry\Rectangle.h" />
+    <ClInclude Include="PowerConsole\Geometry\Thickness.h" />
+    <ClInclude Include="PowerConsole\Helpers\fixed_array.h" />
+    <ClInclude Include="PowerConsole\Helpers\Flags.h" />
+    <ClInclude Include="PowerConsole\Helpers\Parsing.h" />
+    <ClInclude Include="PowerConsole\Helpers\StringHelpers.h" />
+    <ClInclude Include="PowerConsole\Helpers\ToString.h" />
+    <ClInclude Include="PowerConsole\Helpers\WordWrapper.h" />
+    <ClInclude Include="PowerConsole\IO\Clipboard.h" />
+    <ClInclude Include="PowerConsole\IO\ClipboardStream.h" />
+    <ClInclude Include="PowerConsole\IO\DirectoryInfo.h" />
+    <ClInclude Include="PowerConsole\IO\AsyncDirectoryLoader.h" />
+    <ClInclude Include="PowerConsole\IO\FileInfo.h" />
+    <ClInclude Include="PowerConsole\IO\FileStream.h" />
+    <ClInclude Include="PowerConsole\IO\IniDocument.h" />
+    <ClInclude Include="PowerConsole\IO\IniProperty.h" />
+    <ClInclude Include="PowerConsole\IO\IniSection.h" />
+    <ClInclude Include="PowerConsole\IO\IOEnums.h" />
+    <ClInclude Include="PowerConsole\IO\IOStream.h" />
+    <ClInclude Include="PowerConsole\IO\Path.h" />
+    <ClInclude Include="PowerConsole\IO\Resources.h" />
+    <ClInclude Include="PowerConsole\IO\ResourceStream.h" />
+    <ClInclude Include="PowerConsole\Declarations.h" />
+    <ClInclude Include="PowerConsole\IO\System.h" />
+    <ClInclude Include="PowerConsole\PowerConsoleSettings.h" />
+    <ClInclude Include="PowerConsole\SystemMenuManager.h" />
+    <ClInclude Include="PowerConsole\Controls\Toolbox\Button.h" />
+    <ClInclude Include="PowerConsole\Controls\Toolbox\FileDialog.h" />
+    <ClInclude Include="PowerConsole\Controls\Toolbox\Internal\FileLocations.h" />
+    <ClInclude Include="PowerConsole\Controls\Toolbox\Internal\FileList.h" />
+    <ClInclude Include="PowerConsole\Controls\Toolbox\Internal\PresetFileLocations.h" />
+    <ClInclude Include="PowerConsole\Controls\Toolbox\Label.h" />
+    <ClInclude Include="PowerConsole\Controls\Toolbox\ListBox.h" />
+    <ClInclude Include="PowerConsole\Controls\Toolbox\Panel.h" />
+    <ClInclude Include="PowerConsole\Controls\Toolbox\ScrollBars.h" />
+    <ClInclude Include="PowerConsole\Controls\Toolbox\ScrollViewer.h" />
+    <ClInclude Include="PowerConsole\Controls\Toolbox\StackPanel.h" />
+    <ClInclude Include="PowerConsole\Controls\Toolbox\TextBox.h" />
+    <ClInclude Include="PowerConsole\Controls\Toolbox\ToggleButton.h" />
+    <ClInclude Include="PowerConsole\ConsoleSettings.h" />
+    <ClInclude Include="PowerConsole\Controls\Window.h" />
+    <ClInclude Include="PowerConsole\Drawing\AsciiAnimation.h" />
+    <ClInclude Include="PowerConsole\Drawing\AsciiEnums.h" />
+    <ClInclude Include="PowerConsole\Drawing\AsciiImage.h" />
+    <ClInclude Include="PowerConsole\Drawing\AsciiImageFileDetails.h" />
+    <ClInclude Include="PowerConsole\Drawing\AsciiImageFrame.h" />
+    <ClInclude Include="PowerConsole\Drawing\AsciiImageHeaders.h" />
+    <ClInclude Include="PowerConsole\Drawing\AsciiImageInfo.h" />
+    <ClInclude Include="PowerConsole\Drawing\Borders.h" />
+    <ClInclude Include="PowerConsole\Drawing\Characters.h" />
+    <ClInclude Include="PowerConsole\Drawing\ConsoleColors.h" />
+    <ClInclude Include="PowerConsole\Drawing\Graphics.h" />
+    <ClInclude Include="PowerConsole\Drawing\Pixel.h" />
+    <ClInclude Include="PowerConsole\HiddenWinAPI.h" />
+    <ClInclude Include="PowerConsole\Input\InputHandler.h" />
+    <ClInclude Include="PowerConsole\Input\Hotkey.h" />
+    <ClInclude Include="PowerConsole\Input\Keyboard.h" />
+    <ClInclude Include="PowerConsole\Input\Keys.h" />
+    <ClInclude Include="PowerConsole\Input\Mouse.h" />
+    <ClInclude Include="PowerConsole\Input\MouseButtons.h" />
+    <ClInclude Include="stdafx.h" />
+    <ClInclude Include="targetver.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="PowerConsole\Console.cpp" />
+    <ClCompile Include="PowerConsole\ConsoleState.cpp" />
+    <ClCompile Include="PowerConsole\ConsoleEnums.cpp" />
+    <ClCompile Include="PowerConsole\ConsoleFont.cpp" />
+    <ClCompile Include="PowerConsole\Controls\Dialog.cpp" />
+    <ClCompile Include="PowerConsole\ConsoleSettings.cpp" />
+    <ClCompile Include="PowerConsole\Controls\ContentControl.cpp" />
+    <ClCompile Include="PowerConsole\Controls\ControlCollection.cpp" />
+    <ClCompile Include="PowerConsole\Controls\ContainerControl.cpp" />
+    <ClCompile Include="PowerConsole\Controls\Control.cpp" />
+    <ClCompile Include="PowerConsole\Controls\Events\Command.cpp" />
+    <ClCompile Include="PowerConsole\Controls\Events\CommandCollection.cpp" />
+    <ClCompile Include="PowerConsole\Controls\Events\EventArgs.cpp" />
+    <ClCompile Include="PowerConsole\Controls\ItemCollection.cpp" />
+    <ClCompile Include="PowerConsole\Controls\MainWindow.cpp" />
+    <ClCompile Include="PowerConsole\Controls\ProtectedContainerControl.cpp" />
+    <ClCompile Include="PowerConsole\Controls\TabStopCollection.cpp" />
+    <ClCompile Include="PowerConsole\Controls\Toolbox\Button.cpp" />
+    <ClCompile Include="PowerConsole\Controls\Toolbox\DialogBox.cpp" />
+    <ClCompile Include="PowerConsole\Controls\Toolbox\FileDialog.cpp" />
+    <ClCompile Include="PowerConsole\Controls\Toolbox\GroupBox.cpp" />
+    <ClCompile Include="PowerConsole\Controls\Toolbox\Image.cpp" />
+    <ClCompile Include="PowerConsole\Controls\Toolbox\ImageButton.cpp" />
+    <ClCompile Include="PowerConsole\Controls\Toolbox\Internal\FileList.cpp" />
+    <ClCompile Include="PowerConsole\Controls\Toolbox\Internal\FileLocations.cpp" />
+    <ClCompile Include="PowerConsole\Controls\Toolbox\Internal\PresetFileLocations.cpp" />
+    <ClCompile Include="PowerConsole\Controls\Toolbox\Label.cpp" />
+    <ClCompile Include="PowerConsole\Controls\Toolbox\ListBox.cpp" />
+    <ClCompile Include="PowerConsole\Controls\Toolbox\MessageBox.cpp" />
+    <ClCompile Include="PowerConsole\Controls\Toolbox\Panel.cpp" />
+    <ClCompile Include="PowerConsole\Controls\Toolbox\ProgressDailog.cpp" />
+    <ClCompile Include="PowerConsole\Controls\Toolbox\ScrollBars.cpp" />
+    <ClCompile Include="PowerConsole\Controls\Toolbox\ScrollViewer.cpp" />
+    <ClCompile Include="PowerConsole\Controls\Toolbox\SplitContainer.cpp" />
+    <ClCompile Include="PowerConsole\Controls\Toolbox\StackPanel.cpp" />
+    <ClCompile Include="PowerConsole\Controls\Toolbox\TextBox.cpp" />
+    <ClCompile Include="PowerConsole\Controls\Toolbox\TextEditBox.cpp" />
+    <ClCompile Include="PowerConsole\Controls\Toolbox\ToggleButton.cpp" />
+    <ClCompile Include="PowerConsole\Controls\Toolbox\YesNoToggleButton.cpp" />
+    <ClCompile Include="PowerConsole\Controls\WindowConsoleWrapper.cpp" />
+    <ClCompile Include="PowerConsole\Controls\Window.cpp" />
+    <ClCompile Include="PowerConsole\Drawing\AsciiAnimation.cpp" />
+    <ClCompile Include="PowerConsole\Drawing\AsciiImage.cpp" />
+    <ClCompile Include="PowerConsole\Drawing\AsciiImageFileDetails.cpp" />
+    <ClCompile Include="PowerConsole\Drawing\AsciiImageFrame.cpp" />
+    <ClCompile Include="PowerConsole\Drawing\AsciiImageHeaders.cpp" />
+    <ClCompile Include="PowerConsole\Drawing\AsciiImageInfo.cpp" />
+    <ClCompile Include="PowerConsole\ConsolePalette.cpp" />
+    <ClCompile Include="PowerConsole\Drawing\Borders.cpp" />
+    <ClCompile Include="PowerConsole\Drawing\Color.cpp" />
+    <ClCompile Include="PowerConsole\Drawing\Graphics.cpp" />
+    <ClCompile Include="PowerConsole\Drawing\Pixel.cpp" />
+    <ClCompile Include="PowerConsole\Geometry\GMath.cpp" />
+    <ClCompile Include="PowerConsole\Geometry\Point.cpp" />
+    <ClCompile Include="PowerConsole\Geometry\Rectangle.cpp" />
+    <ClCompile Include="PowerConsole\Geometry\Thickness.cpp" />
+    <ClCompile Include="PowerConsole\Helpers\Parsing.cpp" />
+    <ClCompile Include="PowerConsole\Helpers\StringHelpers.cpp" />
+    <ClCompile Include="PowerConsole\Helpers\WordWrapper.cpp" />
+    <ClCompile Include="PowerConsole\HiddenWinAPI.cpp" />
+    <ClCompile Include="PowerConsole\Input\InputHandler.cpp" />
+    <ClCompile Include="PowerConsole\Input\Hotkey.cpp" />
+    <ClCompile Include="PowerConsole\Input\Keyboard.cpp" />
+    <ClCompile Include="PowerConsole\Input\Mouse.cpp" />
+    <ClCompile Include="PowerConsole\IO\AsyncDirectoryLoader.cpp" />
+    <ClCompile Include="PowerConsole\IO\Clipboard.cpp" />
+    <ClCompile Include="PowerConsole\IO\ClipboardStream.cpp" />
+    <ClCompile Include="PowerConsole\IO\DirectoryInfo.cpp" />
+    <ClCompile Include="PowerConsole\IO\FileInfo.cpp" />
+    <ClCompile Include="PowerConsole\IO\FileStream.cpp" />
+    <ClCompile Include="PowerConsole\IO\IniDocument.cpp" />
+    <ClCompile Include="PowerConsole\IO\IniProperty.cpp" />
+    <ClCompile Include="PowerConsole\IO\IniSection.cpp" />
+    <ClCompile Include="PowerConsole\IO\IOStream.cpp" />
+    <ClCompile Include="PowerConsole\IO\Path.cpp" />
+    <ClCompile Include="PowerConsole\IO\Resources.cpp" />
+    <ClCompile Include="PowerConsole\IO\ResourceStream.cpp" />
+    <ClCompile Include="PowerConsole\IO\System.cpp" />
+    <ClCompile Include="PowerConsole\PowerConsoleSettings.cpp" />
+    <ClCompile Include="stdafx.cpp">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Create</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">Create</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Create</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|x64'">Create</PrecompiledHeader>
+    </ClCompile>
+    <ClCompile Include="PowerConsole\SystemMenuManager.cpp" />
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>
