@@ -178,7 +178,9 @@ void ConsoleSettings::loadDefaults(bool resetDimensions) {
 	#pragma region Menu Items
 
 	closeButtonEnabled = true;
-	menuItemsEnabled = basicMode;
+	///TODO: Windows 10 has fucked everything up. Leave access to the
+	///      Properties menu so that users can fix all the broken shit.
+	menuItemsEnabled = true; //basicMode;
 
 	#pragma endregion
 
@@ -1087,6 +1089,12 @@ void ConsoleSettings::checkForChanges() {
 }
 
 void ConsoleSettings::applyChanges() {
+	///TODO: Quick fix until proper handling of code pages is done.
+	///      This is the code-page that EVERYTHING is built around.
+	///      Handle restoring this, when done.
+	SetConsoleOutputCP(437); // OEM - United States
+	SetConsoleCP(437);       // Input code-page, possibly unneeded.
+
 	applyScreenInfoChanges(screenInfo, true);
 	applyFontInfoChanges(fontInfo, true);
 	applyCursorInfoChanges(cursorInfo, true);
