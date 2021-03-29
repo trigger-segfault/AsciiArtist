@@ -8,7 +8,7 @@
 ## Libraries
 
 * [ffmpeg-3.2.4-win32-dev](https://web.archive.org/web/20170419055315/https://ffmpeg.zeranoe.com/builds/win32/dev/ffmpeg-3.2.4-win32-dev.zip) <sup>(webarchive, [landing page](https://web.archive.org/web/20170419055315/https://ffmpeg.zeranoe.com/builds/win32/dev/))</sup>
-* [fftw-3.3.5-dll32](http://fftw.org/install/windows.html) <sup>([landing page](http://fftw.org/install/windows.html))</sup>
+* [fftw-3.3.5-dll32](ftp://ftp.fftw.org/pub/fftw/fftw-3.3.5-dll32.zip) <sup>([landing page](http://fftw.org/install/windows.html))</sup>
 * [mpg123-1.24.0-x86](https://www.mpg123.de/download/win32/1.24.0/mpg123-1.24.0-x86.zip) <sup>([landing page](https://www.mpg123.de/download/win64/1.24.0/))</sup>
 * [SFML-2.4.2-windows-vc14-32-bit](https://www.sfml-dev.org/files/SFML-2.4.2-windows-vc14-32-bit.zip) <sup>([landing page](https://www.sfml-dev.org/download/sfml/2.4.2/))</sup>
 
