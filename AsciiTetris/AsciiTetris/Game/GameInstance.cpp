@@ -187,7 +187,7 @@ void GameInstance::gameOver() {
 	now.tm_year += 1900;
 	now.tm_year %= 100;
 	highscore.date =
-		/*(now.tm_mon < 10 ? "0" : "") +*/ std::to_string(now.tm_mon) + "/" +
+		/*(now.tm_mon + 1 < 10 ? "0" : "") +*/ std::to_string(now.tm_mon + 1) + "/" +
 		(now.tm_mday < 10 ? "0" : "") + std::to_string(now.tm_mday) + "/" +
 		std::to_string(now.tm_year);
 
