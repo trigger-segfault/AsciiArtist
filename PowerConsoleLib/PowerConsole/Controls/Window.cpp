@@ -311,8 +311,8 @@ void Window::redraw() {
 
 	if (PowerConsoleSettings::isRecording()) {
 		int time = PowerConsoleSettings::getRecordingTime();
-		int sec = time / 1000;
-		int min = sec / 60;
+		int sec = (time / 1000) % 60;
+		int min = (time / 1000) / 60;
 		std::string recStr =
 			std::to_string(min) + ":" +
 			(sec < 10 ? "0" : "") +
