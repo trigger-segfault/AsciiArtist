@@ -47,6 +47,8 @@ void SystemMenuManager::initialize() {
 				break;
 			}
 
+			///FIXME: This only works with an English system language.
+			///       A language-independent better solution is needed.
 			std::string name = item.dwTypeData;
 			//delete[] item.dwTypeData;
 			if (name == "&Close") {
