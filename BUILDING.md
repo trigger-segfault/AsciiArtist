@@ -39,7 +39,7 @@ lib /def:libmpg123-0.def
 lib /def:libout123-0.def
 
 cd "C:\Libraries\fftw-3.3.5"
-lib /def:libfftw3-3.dll
+lib /def:libfftw3-3.def
 lib /def:libfftw3f-3.def
 lib /def:libfftw3l-3.def
 ```
