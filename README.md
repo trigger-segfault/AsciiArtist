@@ -7,7 +7,7 @@ The console paint program. Ascii Artist has been a long time project. It's gone 
 
 This project isn't well documented yet. Everything should be able to run but not everything is explained outside of looking through the code. I'll get back to fixing this up later.
 
-### [Build Instructions](Building.md) \(WIP\)
+### [Build Instructions](BUILDING.md) \(WIP\)
 
 ***
 
