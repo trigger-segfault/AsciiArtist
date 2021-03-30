@@ -103,17 +103,17 @@ class GameInstance : public Dialog {
 	#pragma region Running
 public:
 	/* Runs a player-controlled game instance. */
-	static GameInstanceResults runPlayerGame(WindowSPtr owner, Highscore& highscoreResult, GameMode gameMode);
+	static GameInstanceResults runPlayerGame(WindowSPtr owner, Highscore& highscoreResult, GameMode gameMode, Point2I blockSize);
 	/* Runs an AI-controlled game instance. */
-	static GameInstanceResults runAIGame(WindowSPtr owner, Highscore& highscoreResult, GameMode gameMode, AISettings ai);
+	static GameInstanceResults runAIGame(WindowSPtr owner, Highscore& highscoreResult, GameMode gameMode, AISettings ai, Point2I blockSize);
 
 	#pragma endregion
 	//========= CONSTRUCTORS =========
 	#pragma region Constructors
 
 private:
-	/* Constructs a game instance. */
-	GameInstance(GameMode gameMode, AISettings* ai);
+	/* Constructs a game instance. Specify player-mode by passing nullptr to ai parameter. */
+	GameInstance(GameMode gameMode, AISettings* ai, Point2I blockSize);
 	/* Initializes the window. */
 	void onInitialize(ControlSPtr sender, EventArgs& e);
 	/* Loads the window. */

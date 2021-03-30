@@ -48,8 +48,9 @@ private:
 	/* The background image. */
 	AsciiImageSPtr background;
 
-	/* The block size setting. */
-	int blockSize;
+	/* The block size setting for tetromino drawing. */
+	Point2I blockSize;
+	//int blockSize;
 
 	/* The currently selected game mode. */
 	GameMode gameMode;

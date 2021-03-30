@@ -34,14 +34,14 @@ const int GameInstance::LINE_SCORE_CHART[] = { 100, 300, 500, 800, 1200, 1800 };
 //=========== RUNNING ============
 #pragma region Running
 
-GameInstanceResults GameInstance::runPlayerGame(WindowSPtr owner, Highscore& highscoreResult, GameMode gameMode) {
-	auto game = makePrivateDialog(GameInstance, gameMode, nullptr);
+GameInstanceResults GameInstance::runPlayerGame(WindowSPtr owner, Highscore& highscoreResult, GameMode gameMode, Point2I blockSize) {
+	auto game = makePrivateDialog(GameInstance, gameMode, nullptr, blockSize);
 	owner->showDialog(game);
 	highscoreResult = game->highscore;
 	return game->result;
 }
-GameInstanceResults GameInstance::runAIGame(WindowSPtr owner, Highscore& highscoreResult, GameMode gameMode, AISettings ai) {
-	auto game = makePrivateDialog(GameInstance, gameMode, &ai);
+GameInstanceResults GameInstance::runAIGame(WindowSPtr owner, Highscore& highscoreResult, GameMode gameMode, AISettings ai, Point2I blockSize) {
+	auto game = makePrivateDialog(GameInstance, gameMode, &ai, blockSize);
 	owner->showDialog(game);
 	highscoreResult = game->highscore;
 	return game->result;
@@ -51,7 +51,7 @@ GameInstanceResults GameInstance::runAIGame(WindowSPtr owner, Highscore& highsco
 //========= CONSTRUCTORS =========
 #pragma region Constructors
 
-GameInstance::GameInstance(GameMode gameMode, AISettings* ai)
+GameInstance::GameInstance(GameMode gameMode, AISettings* ai, Point2I blockSize)
  : Dialog(DialogModes::EntireWindow),
 
 	gameMode(gameMode) {
@@ -68,7 +68,8 @@ GameInstance::GameInstance(GameMode gameMode, AISettings* ai)
 
 	calculateDropSpeed();
 
-	well = std::make_shared<TetrisWell>(gameMode.wellSize, Point2I(2, 2), sfxEnabled);
+	//well = std::make_shared<TetrisWell>(gameMode.wellSize, Point2I(2, 2), sfxEnabled);
+	well = std::make_shared<TetrisWell>(gameMode.wellSize, blockSize, sfxEnabled);
 	if (highscore.aiMode) {
 		highscore.name = ai->name;
 		controller = std::make_shared<AIController>(well, *ai);

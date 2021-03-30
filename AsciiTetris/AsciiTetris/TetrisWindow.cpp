@@ -37,7 +37,7 @@ TetrisWindow::TetrisWindow() {
 	gameModeIndex = 0;
 	ai = AIList::getAI(0);
 	aiIndex = -1;
-	blockSize = 2;
+	blockSize = Point2I(2, 2);  // At the moment this is hardcoded.
 
 	eventInitialize().add(bindEvent(TetrisWindow::onInitialize));
 	eventLoad().add(bindEvent(TetrisWindow::onLoad));
@@ -108,9 +108,9 @@ void TetrisWindow::startGame() {
 		}
 		Highscore highscore;
 		if (aiIndex == -1)
-			result = GameInstance::runPlayerGame(getWindow(), highscore, gameMode);
+			result = GameInstance::runPlayerGame(getWindow(), highscore, gameMode, blockSize);
 		else
-			result = GameInstance::runAIGame(getWindow(), highscore, gameMode, ai);
+			result = GameInstance::runAIGame(getWindow(), highscore, gameMode, ai, blockSize);
 
 		if (result == GameInstanceResults::GameOver) {
 			HighscoreMenu::show(getWindow(), gameMode, highscore);
