@@ -86,18 +86,6 @@ Thankfully everything of importance was heavily scraped and web-archived beforeh
 > Thank you to everyone who supported the project along the way!
 > <sub>([source][Zeranoe FFmpeg Builds shutdown])</sub>
 
-* [Builds][FFmpeg builds]
-* [Windows x86 builds][FFmpeg Windows x86 builds]
-    * [ffmpeg-3.2.4-win32-dev.zip][] <kbd>.lib</kbd>
-    * [ffmpeg-3.2.4-win32-shared.zip][] <kbd>.dll</kbd>
-    * [ffmpeg-3.2.4-win32-static.zip][] <kbd>.exe</kbd> <sub>(not required)</sub>
-* [Windows x64 builds][FFmpeg Windows x64 builds]
-    * [ffmpeg-3.2.4-win64-dev.zip][] <kbd>.lib</kbd>
-    * [ffmpeg-3.2.4-win64-shared.zip][] <kbd>.dll</kbd>
-    * [ffmpeg-3.2.4-win64-static.zip][] <kbd>.exe</kbd> <sub>(not required)</sub>
-
-***
-
 * [Builds][FFmpeg builds] **&gt;** [Windows x86][FFmpeg Windows x86 builds] **&gt;** [dev][FFmpeg Windows x86 dev builds] \| [shared][FFmpeg Windows x86 shared builds] \| [static][FFmpeg Windows x86 static builds]
     * [ffmpeg-3.2.4-win32-dev.zip][] <kbd>.lib</kbd>
     * [ffmpeg-3.2.4-win32-shared.zip][] <kbd>.dll</kbd>
