@@ -7,7 +7,15 @@ The console paint program. Ascii Artist has been a long time project. It's gone 
 
 This project isn't well documented yet. Everything should be able to run but not everything is explained outside of looking through the code. I'll get back to fixing this up later.
 
-### [Build Instructions](BUILDING.md) \(WIP\)
+
+***
+
+See **[Build Instructions](BUILDING.md)** for the completed steps to get everything running. The build process is now *mostly harmless~* 🎉
+
+**Required IDE:** Visual Studio 2019
+
+**Configurations:** *all combinations of Debug/Release and Win32/x64*
+
 
 ***
 

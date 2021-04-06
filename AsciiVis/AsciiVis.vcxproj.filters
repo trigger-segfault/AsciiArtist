@@ -129,9 +129,6 @@
     <None Include="Resources\Palette.conpal" />
     <None Include="Resources\Buttons\Backward.asc" />
     <None Include="Resources\Buttons\Forward.asc" />
-    <None Include="ascii_im.bin">
-      <Filter>Resource Files</Filter>
-    </None>
     <None Include="Resources\Buttons\Play.asc" />
     <None Include="Resources\Buttons\Stop.asc" />
   </ItemGroup>

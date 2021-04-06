@@ -22,32 +22,32 @@
     <ProjectGuid>{C2561822-F66F-4291-8B02-967EA22FA308}</ProjectGuid>
     <Keyword>Win32Proj</Keyword>
     <RootNamespace>AsciiVis</RootNamespace>
-    <WindowsTargetPlatformVersion>8.1</WindowsTargetPlatformVersion>
+    <WindowsTargetPlatformVersion>10.0</WindowsTargetPlatformVersion>
   </PropertyGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
     <ConfigurationType>Application</ConfigurationType>
     <UseDebugLibraries>true</UseDebugLibraries>
-    <PlatformToolset>v140</PlatformToolset>
+    <PlatformToolset>v142</PlatformToolset>
     <CharacterSet>Unicode</CharacterSet>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
     <ConfigurationType>Application</ConfigurationType>
     <UseDebugLibraries>false</UseDebugLibraries>
-    <PlatformToolset>v140</PlatformToolset>
+    <PlatformToolset>v142</PlatformToolset>
     <WholeProgramOptimization>true</WholeProgramOptimization>
     <CharacterSet>Unicode</CharacterSet>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="Configuration">
     <ConfigurationType>Application</ConfigurationType>
     <UseDebugLibraries>true</UseDebugLibraries>
-    <PlatformToolset>v140</PlatformToolset>
+    <PlatformToolset>v142</PlatformToolset>
     <CharacterSet>Unicode</CharacterSet>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="Configuration">
     <ConfigurationType>Application</ConfigurationType>
     <UseDebugLibraries>false</UseDebugLibraries>
-    <PlatformToolset>v140</PlatformToolset>
+    <PlatformToolset>v142</PlatformToolset>
     <WholeProgramOptimization>true</WholeProgramOptimization>
     <CharacterSet>Unicode</CharacterSet>
   </PropertyGroup>
@@ -71,17 +71,31 @@
   <PropertyGroup Label="UserMacros" />
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
     <LinkIncremental>true</LinkIncremental>
-    <IncludePath>$(ProjectDir);$(ProjectDir)..\PowerConsoleLib\;$(ProjectDir)..\SFMLCustom\;C:\Libraries\mpg123-1.24.0;C:\Libraries\fftw-3.3.5;C:\Libraries\ffmpeg-3.2.4\include;$(IncludePath)</IncludePath>
+    <OutDir>$(ProjectDir)bin\$(Configuration)-$(Platform)\</OutDir>
+    <IntDir>$(ProjectDir)obj\$(Configuration)-$(Platform)\</IntDir>
+    <IncludePath>$(ProjectDir);$(ProjectDir)..\PowerConsoleLib\;$(ProjectDir)..\SFMLCustom\;$(SolutionDir)lib\ffmpeg-3.2.4\include\;$(SolutionDir)lib\fftw-3.3.5\;$(SolutionDir)lib\mpg123-1.25.4\;$(IncludePath)</IncludePath>
+    <LibraryPath>$(SolutionDir)lib\ffmpeg-3.2.4\lib\x86\;$(SolutionDir)lib\fftw-3.3.5\x86\;$(SolutionDir)lib\mpg123-1.25.4\x86-debug\;$(SolutionDir)lib\SFML-2.4.2\lib\x86\;$(LibraryPath)</LibraryPath>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
     <LinkIncremental>true</LinkIncremental>
+    <OutDir>$(ProjectDir)bin\$(Configuration)-$(Platform)\</OutDir>
+    <IntDir>$(ProjectDir)obj\$(Configuration)-$(Platform)\</IntDir>
+    <IncludePath>$(ProjectDir);$(ProjectDir)..\PowerConsoleLib\;$(ProjectDir)..\SFMLCustom\;$(SolutionDir)lib\ffmpeg-3.2.4\include\;$(SolutionDir)lib\fftw-3.3.5\;$(SolutionDir)lib\mpg123-1.25.4\;$(IncludePath)</IncludePath>
+    <LibraryPath>$(SolutionDir)lib\ffmpeg-3.2.4\lib\x64\;$(SolutionDir)lib\fftw-3.3.5\x64\;$(SolutionDir)lib\mpg123-1.25.4\x64-debug\;$(SolutionDir)lib\SFML-2.4.2\lib\x64\;$(LibraryPath)</LibraryPath>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
     <LinkIncremental>false</LinkIncremental>
-    <IncludePath>$(ProjectDir);$(ProjectDir)..\PowerConsoleLib\;$(ProjectDir)..\SFMLCustom\;C:\Libraries\mpg123-1.24.0;C:\Libraries\fftw-3.3.5;C:\Libraries\ffmpeg-3.2.4\include;$(IncludePath)</IncludePath>
+    <OutDir>$(ProjectDir)bin\$(Configuration)-$(Platform)\</OutDir>
+    <IntDir>$(ProjectDir)obj\$(Configuration)-$(Platform)\</IntDir>
+    <IncludePath>$(ProjectDir);$(ProjectDir)..\PowerConsoleLib\;$(ProjectDir)..\SFMLCustom\;$(SolutionDir)lib\ffmpeg-3.2.4\include\;$(SolutionDir)lib\fftw-3.3.5\;$(SolutionDir)lib\mpg123-1.25.4\;$(IncludePath)</IncludePath>
+    <LibraryPath>$(SolutionDir)lib\ffmpeg-3.2.4\lib\x86\;$(SolutionDir)lib\fftw-3.3.5\x86\;$(SolutionDir)lib\mpg123-1.25.4\x86\;$(SolutionDir)lib\SFML-2.4.2\lib\x86\;$(LibraryPath)</LibraryPath>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
     <LinkIncremental>false</LinkIncremental>
+    <OutDir>$(ProjectDir)bin\$(Configuration)-$(Platform)\</OutDir>
+    <IntDir>$(ProjectDir)obj\$(Configuration)-$(Platform)\</IntDir>
+    <IncludePath>$(ProjectDir);$(ProjectDir)..\PowerConsoleLib\;$(ProjectDir)..\SFMLCustom\;$(SolutionDir)lib\ffmpeg-3.2.4\include\;$(SolutionDir)lib\fftw-3.3.5\;$(SolutionDir)lib\mpg123-1.25.4\;$(IncludePath)</IncludePath>
+    <LibraryPath>$(SolutionDir)lib\ffmpeg-3.2.4\lib\x64\;$(SolutionDir)lib\fftw-3.3.5\x64\;$(SolutionDir)lib\mpg123-1.25.4\x64\;$(SolutionDir)lib\SFML-2.4.2\lib\x64\;$(LibraryPath)</LibraryPath>
   </PropertyGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
     <ClCompile>
@@ -89,26 +103,63 @@
       <WarningLevel>Level3</WarningLevel>
       <Optimization>Disabled</Optimization>
       <PreprocessorDefinitions>WIN32;_DEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
-      <AdditionalOptions>/std:c++latest %(AdditionalOptions)</AdditionalOptions>
+      <DisableSpecificWarnings>4996</DisableSpecificWarnings>
+      <LanguageStandard>stdcpp17</LanguageStandard>
     </ClCompile>
     <Link>
       <SubSystem>Console</SubSystem>
       <GenerateDebugInformation>true</GenerateDebugInformation>
-      <AdditionalDependencies>openal32.lib;libmpg123-0.lib;libfftw3f-3.lib;%(AdditionalDependencies)</AdditionalDependencies>
-      <AdditionalLibraryDirectories>C:\Libraries\mpg123-1.24.0;C:\Libraries\fftw-3.3.5;C:\Libraries\ffmpeg-3.2.4\lib;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <AdditionalDependencies>libfftw3f-3.lib;libmpg123-0.lib;openal32.lib;%(AdditionalDependencies)</AdditionalDependencies>
     </Link>
+    <PostBuildEvent>
+      <Command>copy /y "$(SolutionDir)lib\ffmpeg-3.2.4\bin\x86\avcodec-57.dll" "$(OutDir)"
+copy /y "$(SolutionDir)lib\ffmpeg-3.2.4\bin\x86\avdevice-57.dll" "$(OutDir)"
+copy /y "$(SolutionDir)lib\ffmpeg-3.2.4\bin\x86\avfilter-6.dll" "$(OutDir)"
+copy /y "$(SolutionDir)lib\ffmpeg-3.2.4\bin\x86\avformat-57.dll" "$(OutDir)"
+copy /y "$(SolutionDir)lib\ffmpeg-3.2.4\bin\x86\avutil-55.dll" "$(OutDir)"
+copy /y "$(SolutionDir)lib\ffmpeg-3.2.4\bin\x86\postproc-54.dll" "$(OutDir)"
+copy /y "$(SolutionDir)lib\ffmpeg-3.2.4\bin\x86\swresample-2.dll" "$(OutDir)"
+copy /y "$(SolutionDir)lib\ffmpeg-3.2.4\bin\x86\swscale-4.dll" "$(OutDir)"
+copy /y "$(SolutionDir)lib\fftw-3.3.5\x86\libfftw3f-3.dll" "$(OutDir)"
+copy /y "$(SolutionDir)lib\mpg123-1.25.4\x86-debug\libmpg123-0.dll" "$(OutDir)"
+copy /y "$(SolutionDir)lib\SFML-2.4.2\bin\x86\openal32.dll" "$(OutDir)"
+xcopy "$(ProjectDir)Resources\" "$(OutDir)Resources\" /e /y</Command>
+    </PostBuildEvent>
+    <PostBuildEvent>
+      <Message>Copy required Dlls and Resources</Message>
+    </PostBuildEvent>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
     <ClCompile>
       <PrecompiledHeader>Use</PrecompiledHeader>
       <WarningLevel>Level3</WarningLevel>
       <Optimization>Disabled</Optimization>
-      <PreprocessorDefinitions>_DEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <PreprocessorDefinitions>WIN32;_DEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <DisableSpecificWarnings>4996</DisableSpecificWarnings>
+      <LanguageStandard>stdcpp17</LanguageStandard>
     </ClCompile>
     <Link>
       <SubSystem>Console</SubSystem>
       <GenerateDebugInformation>true</GenerateDebugInformation>
+      <AdditionalDependencies>libfftw3f-3.lib;libmpg123-0.lib;openal32.lib;%(AdditionalDependencies)</AdditionalDependencies>
     </Link>
+    <PostBuildEvent>
+      <Command>copy /y "$(SolutionDir)lib\ffmpeg-3.2.4\bin\x64\avcodec-57.dll" "$(OutDir)"
+copy /y "$(SolutionDir)lib\ffmpeg-3.2.4\bin\x64\avdevice-57.dll" "$(OutDir)"
+copy /y "$(SolutionDir)lib\ffmpeg-3.2.4\bin\x64\avfilter-6.dll" "$(OutDir)"
+copy /y "$(SolutionDir)lib\ffmpeg-3.2.4\bin\x64\avformat-57.dll" "$(OutDir)"
+copy /y "$(SolutionDir)lib\ffmpeg-3.2.4\bin\x64\avutil-55.dll" "$(OutDir)"
+copy /y "$(SolutionDir)lib\ffmpeg-3.2.4\bin\x64\postproc-54.dll" "$(OutDir)"
+copy /y "$(SolutionDir)lib\ffmpeg-3.2.4\bin\x64\swresample-2.dll" "$(OutDir)"
+copy /y "$(SolutionDir)lib\ffmpeg-3.2.4\bin\x64\swscale-4.dll" "$(OutDir)"
+copy /y "$(SolutionDir)lib\fftw-3.3.5\x64\libfftw3f-3.dll" "$(OutDir)"
+copy /y "$(SolutionDir)lib\mpg123-1.25.4\x64-debug\libmpg123-0.dll" "$(OutDir)"
+copy /y "$(SolutionDir)lib\SFML-2.4.2\bin\x64\openal32.dll" "$(OutDir)"
+xcopy "$(ProjectDir)Resources\" "$(OutDir)Resources\" /e /y</Command>
+    </PostBuildEvent>
+    <PostBuildEvent>
+      <Message>Copy required Dlls and Resources</Message>
+    </PostBuildEvent>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
     <ClCompile>
@@ -118,17 +169,34 @@
       <FunctionLevelLinking>true</FunctionLevelLinking>
       <IntrinsicFunctions>true</IntrinsicFunctions>
       <PreprocessorDefinitions>WIN32;NDEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
-      <AdditionalOptions>/std:c++latest %(AdditionalOptions)</AdditionalOptions>
+      <DisableSpecificWarnings>4996</DisableSpecificWarnings>
+      <LanguageStandard>stdcpp17</LanguageStandard>
     </ClCompile>
     <Link>
       <SubSystem>Console</SubSystem>
       <EnableCOMDATFolding>true</EnableCOMDATFolding>
       <OptimizeReferences>true</OptimizeReferences>
       <GenerateDebugInformation>true</GenerateDebugInformation>
-      <AdditionalDependencies>openal32.lib;libmpg123-0.lib;libfftw3f-3.lib;%(AdditionalDependencies)</AdditionalDependencies>
-      <AdditionalLibraryDirectories>C:\Libraries\mpg123-1.24.0;C:\Libraries\fftw-3.3.5;C:\Libraries\ffmpeg-3.2.4\lib;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <AdditionalDependencies>libfftw3f-3.lib;libmpg123-0.lib;openal32.lib;%(AdditionalDependencies)</AdditionalDependencies>
       <ImageHasSafeExceptionHandlers>false</ImageHasSafeExceptionHandlers>
     </Link>
+    <PostBuildEvent>
+      <Command>copy /y "$(SolutionDir)lib\ffmpeg-3.2.4\bin\x86\avcodec-57.dll" "$(OutDir)"
+copy /y "$(SolutionDir)lib\ffmpeg-3.2.4\bin\x86\avdevice-57.dll" "$(OutDir)"
+copy /y "$(SolutionDir)lib\ffmpeg-3.2.4\bin\x86\avfilter-6.dll" "$(OutDir)"
+copy /y "$(SolutionDir)lib\ffmpeg-3.2.4\bin\x86\avformat-57.dll" "$(OutDir)"
+copy /y "$(SolutionDir)lib\ffmpeg-3.2.4\bin\x86\avutil-55.dll" "$(OutDir)"
+copy /y "$(SolutionDir)lib\ffmpeg-3.2.4\bin\x86\postproc-54.dll" "$(OutDir)"
+copy /y "$(SolutionDir)lib\ffmpeg-3.2.4\bin\x86\swresample-2.dll" "$(OutDir)"
+copy /y "$(SolutionDir)lib\ffmpeg-3.2.4\bin\x86\swscale-4.dll" "$(OutDir)"
+copy /y "$(SolutionDir)lib\fftw-3.3.5\x86\libfftw3f-3.dll" "$(OutDir)"
+copy /y "$(SolutionDir)lib\mpg123-1.25.4\x86\libmpg123-0.dll" "$(OutDir)"
+copy /y "$(SolutionDir)lib\SFML-2.4.2\bin\x86\openal32.dll" "$(OutDir)"
+xcopy "$(ProjectDir)Resources\" "$(OutDir)Resources\" /e /y</Command>
+    </PostBuildEvent>
+    <PostBuildEvent>
+      <Message>Copy required Dlls and Resources</Message>
+    </PostBuildEvent>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
     <ClCompile>
@@ -137,14 +205,34 @@
       <Optimization>MaxSpeed</Optimization>
       <FunctionLevelLinking>true</FunctionLevelLinking>
       <IntrinsicFunctions>true</IntrinsicFunctions>
-      <PreprocessorDefinitions>NDEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <PreprocessorDefinitions>WIN32;NDEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <DisableSpecificWarnings>4996</DisableSpecificWarnings>
+      <LanguageStandard>stdcpp17</LanguageStandard>
     </ClCompile>
     <Link>
       <SubSystem>Console</SubSystem>
       <EnableCOMDATFolding>true</EnableCOMDATFolding>
       <OptimizeReferences>true</OptimizeReferences>
       <GenerateDebugInformation>true</GenerateDebugInformation>
+      <AdditionalDependencies>libfftw3f-3.lib;libmpg123-0.lib;openal32.lib;%(AdditionalDependencies)</AdditionalDependencies>
     </Link>
+    <PostBuildEvent>
+      <Command>copy /y "$(SolutionDir)lib\ffmpeg-3.2.4\bin\x64\avcodec-57.dll" "$(OutDir)"
+copy /y "$(SolutionDir)lib\ffmpeg-3.2.4\bin\x64\avdevice-57.dll" "$(OutDir)"
+copy /y "$(SolutionDir)lib\ffmpeg-3.2.4\bin\x64\avfilter-6.dll" "$(OutDir)"
+copy /y "$(SolutionDir)lib\ffmpeg-3.2.4\bin\x64\avformat-57.dll" "$(OutDir)"
+copy /y "$(SolutionDir)lib\ffmpeg-3.2.4\bin\x64\avutil-55.dll" "$(OutDir)"
+copy /y "$(SolutionDir)lib\ffmpeg-3.2.4\bin\x64\postproc-54.dll" "$(OutDir)"
+copy /y "$(SolutionDir)lib\ffmpeg-3.2.4\bin\x64\swresample-2.dll" "$(OutDir)"
+copy /y "$(SolutionDir)lib\ffmpeg-3.2.4\bin\x64\swscale-4.dll" "$(OutDir)"
+copy /y "$(SolutionDir)lib\fftw-3.3.5\x64\libfftw3f-3.dll" "$(OutDir)"
+copy /y "$(SolutionDir)lib\mpg123-1.25.4\x64\libmpg123-0.dll" "$(OutDir)"
+copy /y "$(SolutionDir)lib\SFML-2.4.2\bin\x64\openal32.dll" "$(OutDir)"
+xcopy "$(ProjectDir)Resources\" "$(OutDir)Resources\" /e /y</Command>
+    </PostBuildEvent>
+    <PostBuildEvent>
+      <Message>Copy required Dlls and Resources</Message>
+    </PostBuildEvent>
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClInclude Include="AsciiVis\AsciiVisWindow.h" />
@@ -201,7 +289,7 @@
     <ResourceCompile Include="AsciiVis.rc" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="ascii_im.bin" />
+    <!--<None Include="ascii_im.bin" />-->
     <None Include="Resources\Buttons\Backward.asc" />
     <None Include="Resources\Buttons\Forward.asc" />
     <None Include="Resources\Buttons\Play.asc" />

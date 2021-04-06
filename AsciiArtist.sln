@@ -1,8 +1,8 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio 14
-VisualStudioVersion = 14.0.25420.1
-MinimumVisualStudioVersion = 10.0.40219.1
+# Visual Studio 16
+VisualStudioVersion = 16.0.0
+MinimumVisualStudioVersion = 15.9.13
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "AsciiArtist", "AsciiArtist\AsciiArtist.vcxproj", "{0CC0F0F4-8041-4F01-B186-A1071367BB3D}"
 EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "PowerConsoleLib", "PowerConsoleLib\PowerConsoleLib.vcxproj", "{B571C836-8F8A-4A07-B42B-B93C98690426}"
