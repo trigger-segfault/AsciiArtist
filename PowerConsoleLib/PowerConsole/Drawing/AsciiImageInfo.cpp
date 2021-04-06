@@ -29,6 +29,7 @@ const std::string AsciiImageInfo::FILE_SIGNATURE = "ASCIMG";
 const std::string AsciiImageInfo::SMALL_FILE_SIGNATURE = "ASCSML";
 const Point2I AsciiImageInfo::MAX_SIZE = Point2I(1024, 1024);
 const unsigned int AsciiImageInfo::MAX_FRAMES = 1024;
+const unsigned int AsciiImageInfo::DEFAULT_ANIMATION_SPEED = 800;
 const std::string AsciiImageInfo::CLIPBOARD_FORMAT_NAME = "Ascii Image";
 const unsigned int AsciiImageInfo::CLIPBOARD_FORMAT = Clipboard::registerFormat(AsciiImageInfo::CLIPBOARD_FORMAT_NAME);
 
@@ -63,7 +64,7 @@ AsciiImageHeader AsciiImageInfo::createHeader(const AsciiImage& image, unsigned 
 	header.size = image.frameSize;
 	header.format = image.format;
 	header.frameCount = 1;
-	header.animationSpeed = 800;
+	header.animationSpeed = DEFAULT_ANIMATION_SPEED;
 	header.background = image.background;
 
 	header.frameSize = image.frameSize.x * image.frameSize.y * (2 + header.bytesPerAttribute);
@@ -374,7 +375,7 @@ bool AsciiImageInfo::loadHeader(InputStream* in, AsciiImageHeader& header, bool 
 			header.frameCount = in->readUShort();
 			header.bytesPerAttribute = in->readUShort();
 
-			header.animationSpeed = 800;
+			header.animationSpeed = DEFAULT_ANIMATION_SPEED; // no speed stored in ASCSML
 			header.bytesPerName = 0;
 			header.format = ImageFormats::Basic;
 			if (header.bytesPerAttribute > 0)
@@ -447,13 +448,13 @@ bool AsciiImageInfo::loadFrameHeader(InputStream* in, AsciiImageHeader& header, 
 	else if (header.signature == SMALL_FILE_SIGNATURE && header.version >= 1) {
 		frame.name = "";
 		frame.size = header.size;
-		frame.frameSpeed = 800;
+		frame.frameSpeed = header.animationSpeed; // no speed stored in frame header
 		frame.layers = 1;
 	}
 	else {
 		frame.name = "";
 		frame.size = header.size;
-		frame.frameSpeed = 800;
+		frame.frameSpeed = header.animationSpeed; // speed is stored per-file, not per-frame
 		frame.layers = 1;
 	}
 
@@ -509,7 +510,9 @@ bool AsciiImageInfo::saveHeader(OutputStream* out, AsciiImageHeader& header, boo
 
 		out->writeString(header.signature, 6);
 		out->writeUShort(header.version);
-		out->setBigEndian(header.version == 3);
+		if (header.version >= 4)
+			out->setBigEndian(false);
+
 		out->writeUInt(header.fileSize);
 		out->writeUInt(header.headerOffset);
 		out->writeUInt(header.frameArrayOffset);

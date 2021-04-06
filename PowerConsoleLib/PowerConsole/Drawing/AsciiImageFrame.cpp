@@ -27,7 +27,7 @@ AsciiImageFrame::AsciiImageFrame(Point2I size, ImageFormats format, Pixel backgr
 	this->frameSize = size;
 	this->format = format;
 	this->background = background;
-	this->frameSpeed = 800;
+	this->frameSpeed = AsciiImageInfo::DEFAULT_ANIMATION_SPEED;
 	this->name = "";
 
 	this->pixels = new Pixel[this->frameSize.x * this->frameSize.y];

@@ -29,7 +29,7 @@ AsciiAnimation::AsciiAnimation()
 AsciiAnimation::AsciiAnimation(Point2I size, ImageFormats format, unsigned int frames)
 	: AsciiAnimation(size, format,  Pixel(), frames) {}
 AsciiAnimation::AsciiAnimation(Point2I size, ImageFormats format, Pixel background, unsigned int frames) {
-	this->animationSpeed = 800;
+	this->animationSpeed = AsciiImageInfo::DEFAULT_ANIMATION_SPEED;
 	this->frames.push_back(AsciiImage(size, format, background));
 
 	for (int i = 1; i < (int)frames; i++) {
@@ -37,15 +37,15 @@ AsciiAnimation::AsciiAnimation(Point2I size, ImageFormats format, Pixel backgrou
 	}
 }
 AsciiAnimation::AsciiAnimation(ImageFormats format, Pixel background, const AsciiImageFrame& image) {
-	this->animationSpeed = 800;
+	this->animationSpeed = image.frameSpeed;
 	this->frames.push_back(AsciiImage(format, background, image));
 }
 AsciiAnimation::AsciiAnimation(ImageFormats format, Pixel background, AsciiImageFrame&& image) {
-	this->animationSpeed = 800;
+	this->animationSpeed = image.frameSpeed;
 	this->frames.push_back(AsciiImage(format, background, std::move(image)));
 }
 AsciiAnimation::AsciiAnimation(Rectangle2I region, ImageFormats format, Pixel background, const AsciiImageFrame& image) {
-	this->animationSpeed = 800;
+	this->animationSpeed = image.frameSpeed;
 	this->frames.push_back(AsciiImage(region, format, background, image));
 }
 AsciiAnimation::AsciiAnimation(ImageFormats format, Pixel background, const AsciiAnimation& animation) {
@@ -71,12 +71,12 @@ AsciiAnimation::AsciiAnimation(Rectangle2I region, ImageFormats format, Pixel ba
 	}
 }
 AsciiAnimation::AsciiAnimation(const AsciiImageFrame& image) {
-	this->animationSpeed = 800;
+	this->animationSpeed = image.frameSpeed;
 
 	this->frames.push_back(image);
 }
 AsciiAnimation::AsciiAnimation(AsciiImageFrame&& image) {
-	this->animationSpeed = 800;
+	this->animationSpeed = image.frameSpeed;
 
 	this->frames.push_back(std::move(image));
 }
@@ -105,13 +105,13 @@ AsciiAnimation::~AsciiAnimation() {
 
 // Assignment
 AsciiAnimation& AsciiAnimation::operator=(const AsciiImageFrame& image) {
-	animationSpeed = 800;
+	animationSpeed = image.frameSpeed;
 	frames.clear();
 	frames.push_back(image);
 	return *this;
 }
 AsciiAnimation& AsciiAnimation::operator=(AsciiImageFrame&& image) {
-	animationSpeed = 800;
+	animationSpeed = image.frameSpeed;
 	frames.clear();
 	frames.push_back(std::move(image));
 	return *this;

@@ -6,6 +6,7 @@
 
 #include "stdafx.h"
 #include "AsciiImageHeaders.h"
+#include <PowerConsole/Drawing/AsciiImageInfo.h>
 
 using namespace PowerConsole::Drawing;
 using namespace PowerConsole::Geometry;
@@ -39,7 +40,7 @@ AsciiImageHeader::AsciiImageHeader() {
 	this->frameCount = 1;
 	this->size = Point2I::ONE;
 	this->background = Pixel();
-	this->animationSpeed = 800;
+	this->animationSpeed = AsciiImageInfo::DEFAULT_ANIMATION_SPEED;
 }
 AsciiImageFrameHeader::AsciiImageFrameHeader() {
 	// File Information

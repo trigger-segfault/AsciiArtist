@@ -43,6 +43,8 @@ public:
 	static const PcGeo::Point2I MAX_SIZE;
 	/* The maximum number of frames recomended for an ascii image. */
 	static const unsigned int MAX_FRAMES;
+	/* The default animation speed for frames. */
+	static const unsigned int DEFAULT_ANIMATION_SPEED;
 	/* The name of the clipboard format used for ascii images. */
 	static const std::string CLIPBOARD_FORMAT_NAME;
 	/* The id of the clipboard format used for ascii images. */
