@@ -23,6 +23,8 @@ class ConsolePaletteInfo {
 	//========== CONSTANTS ===========
 	#pragma region Constants
 public:
+	/* The recommended file extension for use with console palette files. */
+	static const std::string FILE_EXTENSION;
 	/* The name of the clipboard format used for console palettes. */
 	static const std::string CLIPBOARD_FORMAT_NAME;
 	/* The id of the clipboard format used for console palettes. */

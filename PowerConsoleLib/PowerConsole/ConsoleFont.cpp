@@ -20,6 +20,7 @@ using namespace PowerConsole::IO;
 //========== CONSTANTS ===========
 #pragma region Constants
 
+const std::string ConsoleFontInfo::FILE_EXTENSION = ".confnt";
 const std::string ConsoleFontInfo::CLIPBOARD_FORMAT_NAME = "Console Font";
 const PcIO::ClipboardFormat ConsoleFontInfo::CLIPBOARD_FORMAT = Clipboard::registerFormat(ConsoleFontInfo::CLIPBOARD_FORMAT_NAME);
 

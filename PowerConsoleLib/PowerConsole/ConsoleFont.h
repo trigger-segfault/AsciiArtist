@@ -25,6 +25,8 @@ class ConsoleFontInfo {
 	//========== CONSTANTS ===========
 	#pragma region Constants
 public:
+	/* The recommended file extension for use with console font files. */
+	static const std::string FILE_EXTENSION;
 	/* The name of the clipboard format used for console fonts. */
 	static const std::string CLIPBOARD_FORMAT_NAME;
 	/* The id of the clipboard format used for console fonts. */

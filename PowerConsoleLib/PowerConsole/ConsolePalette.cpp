@@ -20,6 +20,7 @@ using namespace PowerConsole::IO;
 //========== CONSTANTS ===========
 #pragma region Constants
 
+const std::string ConsolePaletteInfo::FILE_EXTENSION = ".conpal";
 const std::string ConsolePaletteInfo::CLIPBOARD_FORMAT_NAME = "Console Palette";
 const PcIO::ClipboardFormat ConsolePaletteInfo::CLIPBOARD_FORMAT = Clipboard::registerFormat(ConsolePaletteInfo::CLIPBOARD_FORMAT_NAME);
 

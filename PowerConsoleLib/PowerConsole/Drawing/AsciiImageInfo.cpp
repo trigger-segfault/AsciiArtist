@@ -27,6 +27,7 @@ const unsigned short AsciiImageInfo::FILE_VERSION = 4;
 const unsigned short AsciiImageInfo::SMALL_FILE_VERSION = 1;
 const std::string AsciiImageInfo::FILE_SIGNATURE = "ASCIMG";
 const std::string AsciiImageInfo::SMALL_FILE_SIGNATURE = "ASCSML";
+const std::string AsciiImageInfo::FILE_EXTENSION = ".asc";
 const Point2I AsciiImageInfo::MAX_SIZE = Point2I(1024, 1024);
 const unsigned int AsciiImageInfo::MAX_FRAMES = 1024;
 const unsigned int AsciiImageInfo::DEFAULT_ANIMATION_SPEED = 800;

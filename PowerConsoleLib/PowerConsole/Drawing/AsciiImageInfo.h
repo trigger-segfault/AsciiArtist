@@ -39,6 +39,8 @@ public:
 	static const std::string FILE_SIGNATURE;
 	/* The signature used for lightweight ascii images. */
 	static const std::string SMALL_FILE_SIGNATURE;
+	/* The recommended file extension for use with ascii images. */
+	static const std::string FILE_EXTENSION;
 	/* The maximum size recomended for an ascii image. */
 	static const PcGeo::Point2I MAX_SIZE;
 	/* The maximum number of frames recomended for an ascii image. */
