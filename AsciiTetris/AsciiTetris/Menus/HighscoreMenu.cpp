@@ -5,7 +5,7 @@
 |=================================================================*/
 
 #include "stdafx.h"
-#include "resources.h"
+#include "resource.h"
 #include "HighscoreMenu.h"
 #include <PowerConsole/PowerConsoleSettings.h>
 #include <PowerConsole/Geometry/GMath.h>

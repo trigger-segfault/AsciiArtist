@@ -5,7 +5,7 @@
 |=================================================================*/
 
 #include "stdafx.h"
-#include "resources.h"
+#include "resource.h"
 #include "TetrisWindow.h"
 #include <PowerConsole/PowerConsoleSettings.h>
 #include <AsciiTetris/Resources/TetrominoList.h>

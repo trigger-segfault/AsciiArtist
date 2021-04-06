@@ -5,7 +5,7 @@
 |=================================================================*/
 
 #include "stdafx.h"
-#include "resources.h"
+#include "resource.h"
 #include "AIList.h"
 #include <PowerConsole/Geometry/GMath.h>
 #include <PowerConsole/IO/Path.h>

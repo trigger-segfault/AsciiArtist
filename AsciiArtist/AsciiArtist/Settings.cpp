@@ -14,7 +14,7 @@
 #include <PowerConsole/Helpers/Flags.h>
 #include <PowerConsole/Drawing/ConsoleColors.h>
 #include <PowerConsole/Geometry/GMath.h>
-#include "resources.h"
+#include "resource.h"
 
 using namespace PowerConsole::Geometry;
 using namespace PowerConsole::Helpers;

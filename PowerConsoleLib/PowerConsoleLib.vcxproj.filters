@@ -15,6 +15,9 @@
     </Filter>
   </ItemGroup>
   <ItemGroup>
+    <Text Include="README.md" />
+  </ItemGroup>
+  <ItemGroup>
     <ClInclude Include="PowerConsole\Input\Keyboard.h">
       <Filter>Header Files</Filter>
     </ClInclude>

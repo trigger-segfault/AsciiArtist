@@ -5,7 +5,7 @@
 |=================================================================*/
 
 #include "stdafx.h"
-#include "resources.h"
+#include "resource.h"
 #include "GameInstance.h"
 #include <AsciiTetris/Helpers/Helpers.h>
 #include <AsciiTetris/Menus/HighscoreMenu.h>

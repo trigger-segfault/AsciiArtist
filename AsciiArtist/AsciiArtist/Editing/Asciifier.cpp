@@ -6,7 +6,7 @@
 
 #include "stdafx.h"
 #include "Asciifier.h"
-#include "resources.h"
+#include "resource.h"
 #include <PowerConsole/Geometry/GMath.h>
 #include <PowerConsole/Drawing/ConsoleColors.h>
 #include <PowerConsole/Drawing/Graphics.h>

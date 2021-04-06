@@ -5,7 +5,7 @@
 |=================================================================*/
 
 #include "stdafx.h"
-#include "resources.h"
+#include "resource.h"
 #include "CharacterGrid.h"
 #include <PowerConsole/Helpers/Flags.h>
 #include <PowerConsole/Drawing/ConsoleColors.h>

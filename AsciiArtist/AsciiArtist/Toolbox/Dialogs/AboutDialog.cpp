@@ -6,7 +6,7 @@
 
 #include "stdafx.h"
 #include "AboutDialog.h"
-#include "resources.h"
+#include "resource.h"
 #include <PowerConsole/IO/Path.h>
 #include <PowerConsole/Drawing/ConsoleColors.h>
 

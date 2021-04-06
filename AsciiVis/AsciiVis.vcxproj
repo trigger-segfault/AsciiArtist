@@ -235,6 +235,9 @@ xcopy "$(ProjectDir)Resources\" "$(OutDir)Resources\" /e /y</Command>
     </PostBuildEvent>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <Text Include="README.md" />
+  </ItemGroup>
+  <ItemGroup>
     <ClInclude Include="AsciiVis\AsciiVisWindow.h" />
     <ClInclude Include="AsciiVis\Colors.h" />
     <ClInclude Include="AsciiVis\LoadingDialog.h" />
@@ -286,7 +289,7 @@ xcopy "$(ProjectDir)Resources\" "$(OutDir)Resources\" /e /y</Command>
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>
-    <ResourceCompile Include="AsciiVis.rc" />
+    <ResourceCompile Include="resource.rc" />
   </ItemGroup>
   <ItemGroup>
     <!--<None Include="ascii_im.bin" />-->

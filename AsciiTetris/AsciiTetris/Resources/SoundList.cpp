@@ -5,7 +5,7 @@
 |=================================================================*/
 
 #include "stdafx.h"
-#include "resources.h"
+#include "resource.h"
 #include "SoundList.h"
 
 using namespace AsciiTetris::Resources;

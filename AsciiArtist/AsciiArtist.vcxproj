@@ -161,7 +161,7 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <Text Include="Readme.txt" />
+    <Text Include="README.md" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="AsciiArtist\AsciiArtistWindow.h" />
@@ -213,7 +213,7 @@
     <ClInclude Include="AsciiArtist\Toolbox\Dialogs\ResizeDialogBox.h" />
     <ClInclude Include="AsciiArtist\Toolbox\Controls\StatusBar.h" />
     <ClInclude Include="AsciiArtist\Toolbox\Dialogs\TranslateDialogBox.h" />
-    <ClInclude Include="resources.h" />
+    <ClInclude Include="resource.h" />
     <ClInclude Include="stdafx.h" />
     <ClInclude Include="targetver.h" />
   </ItemGroup>
@@ -272,7 +272,7 @@
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
-    <ResourceCompile Include="resources.rc" />
+    <ResourceCompile Include="resource.rc" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\PowerConsoleLib\PowerConsoleLib.vcxproj">

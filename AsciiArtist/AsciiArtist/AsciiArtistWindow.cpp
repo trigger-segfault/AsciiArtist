@@ -5,7 +5,7 @@
 |=================================================================*/
 
 #include "stdafx.h"
-#include "resources.h"
+#include "resource.h"
 #include "AsciiArtistWindow.h"
 #include <PowerConsole/PowerConsoleSettings.h>
 #include <PowerConsole/Controls/Toolbox/ToggleButton.h>

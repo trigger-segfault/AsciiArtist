@@ -158,6 +158,9 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <Text Include="README.md" />
+  </ItemGroup>
+  <ItemGroup>
     <ClInclude Include="PowerConsole\Console.h" />
     <ClInclude Include="PowerConsole\ConsoleState.h" />
     <ClInclude Include="PowerConsole\ConsoleEnums.h" />

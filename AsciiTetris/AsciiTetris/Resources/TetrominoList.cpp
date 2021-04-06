@@ -5,7 +5,7 @@
 |=================================================================*/
 
 #include "stdafx.h"
-#include "resources.h"
+#include "resource.h"
 #include "TetrominoList.h"
 #include <PowerConsole/Drawing/ConsoleColors.h>
 #include <PowerConsole/Geometry/GMath.h>
