@@ -1,6 +1,9 @@
 # External libraries
 lib/*/
 
+# Ignore release builds
+build/
+
 
 # Compiled Object files
 *.slo
