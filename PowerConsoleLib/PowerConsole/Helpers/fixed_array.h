@@ -9,6 +9,7 @@
 #define FIXED_ARRAY_H
 
 #include <memory>
+#include <vector>
 #include <PowerConsole/Declarations.h>
 
 namespace PowerConsole::Helpers {

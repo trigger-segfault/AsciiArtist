@@ -273,6 +273,15 @@ public:
 
 	#pragma endregion
 	//--------------------------------
+	#pragma region Rendering
+
+	/* Gets the background fill used when clearing the render target. */
+	PcDraw::Pixel getBackground() const;
+	/* Sets the background fill used when clearing the render target. */
+	void setBackground(PcDraw::Pixel background);
+
+	#pragma endregion
+	//--------------------------------
 	#pragma region Local Layout
 
 	/* Gets the size of the control. */

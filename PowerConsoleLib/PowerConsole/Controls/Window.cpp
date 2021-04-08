@@ -533,6 +533,17 @@ void Window::nextTabStop() {
 
 #pragma endregion
 //--------------------------------
+#pragma region Rendering
+
+Pixel Window::getBackground() const {
+	return this->graphicsImage->getBackground();
+}
+void Window::setBackground(Pixel background) {
+	this->graphicsImage->setBackground(background);
+}
+
+#pragma endregion
+//--------------------------------
 #pragma region Local Layout
 
 Point2I Window::getSize() const {

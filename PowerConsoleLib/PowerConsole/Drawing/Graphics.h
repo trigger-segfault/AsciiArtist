@@ -80,7 +80,7 @@ struct DisabledBorders {
 		: left(all), top(all), right(all), bottom(all), inside(all), outside(all) {}
 	/* Constructs a disabled borders struct. */
 	inline DisabledBorders(bool left, bool top, bool right, bool bottom)
-		: left(left), top(top), right(right), bottom(bottom), inside(inside), outside(outside) {}
+		: left(left), top(top), right(right), bottom(bottom), inside(false), outside(false) {}
 	/* Constructs a disabled borders struct. */
 	inline DisabledBorders(bool inside, bool outside)
 		: left(false), top(false), right(false), bottom(false), inside(inside), outside(outside) {}
