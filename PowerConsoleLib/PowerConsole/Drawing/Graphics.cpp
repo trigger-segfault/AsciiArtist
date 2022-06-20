@@ -627,7 +627,7 @@ void Graphics::drawFloodFill(Point2I point, Pixel pixel, bool specific) {
 			// range of pixels in a row
 			bool northcontinue = false, southcontinue = false;
 			for (int i = 0; i < width; ++i) {
-				if (yBoundsCheck(point.y - 1 >= 0)) {
+				if (yBoundsCheck(point.y - 1)) {
 					if (toPixelxy(point.x + i, point.y - 1).matches(target, specific)) {
 						if (!northcontinue) {
 							nodes.push(point + Point2I(i, -1));
